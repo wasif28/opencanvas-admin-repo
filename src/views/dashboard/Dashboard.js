@@ -1,78 +1,106 @@
 import React, { useState } from "react";
 import arrowdown from "assets/img/userflow/arrow-down.png";
 import ReactApexChart from "react-apexcharts";
-import './dashboard.scss';
+import "./dashboard.scss";
 import { Link } from "react-router-dom";
 
 function Dashboard() {
-  const [options, setobject] = useState(
-    {
-      chart: {
-        type: 'bar',
-        height: 350
+  const [options, setobject] = useState({
+    chart: {
+      type: "bar",
+      height: 350,
+    },
+    plotOptions: {
+      bar: {
+        horizontal: false,
+        columnWidth: "55%",
+        endingShape: "rounded",
       },
-      plotOptions: {
-        bar: {
-          horizontal: false,
-          columnWidth: '55%',
-          endingShape: 'rounded'
+    },
+    dataLabels: {
+      enabled: false,
+      style: {
+        colors: ["#901CEE", "#C8F2E3", "#D1AAF0"],
+      },
+    },
+    stroke: {
+      show: true,
+      width: 2,
+      colors: ["transparent"],
+    },
+    xaxis: {
+      categories: [
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+      ],
+      // title: {
+      //   text: '$ (thousands)'
+      // }
+    },
+    // yaxis: {
+    //   title: {
+    //     text: '$ (thousands)'
+    //   }
+    // },
+    fill: {
+      opacity: 1,
+      colors: ["#901CEE", "#C8F2E3", "#D1AAF0"],
+    },
+    markers: {
+      colors: ["#901CEE", "#C8F2E3", "#D1AAF0"],
+    },
+    tooltip: {
+      y: {
+        formatter: function (val) {
+          return "$ " + val + " thousands";
         },
       },
-      dataLabels: {
-        enabled: true,
-        style: {
-          colors: ['#901CEE', '#C8F2E3', '#D1AAF0']
-        }
-      },
-      stroke: {
-        show: true,
-        width: 2,
-        colors: ['transparent']
-      },
-      xaxis: {
-        categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
-      },
-      yaxis: {
-        title: {
-          text: '$ (thousands)'
-        }
-      },
-      fill: {
-        opacity: 1,
-        colors: ['#901CEE', '#C8F2E3', '#D1AAF0']
-      },
-      markers: {
-        colors: ['#901CEE', '#C8F2E3', '#D1AAF0']
-      },
-      tooltip: {
-        y: {
-          formatter: function (val) {
-            return "$ " + val + " thousands"
-          }
-        }
-      }
     },
-  )
-  const [series, setseries] = useState(
-    [{
-      // name: 'Net Profit',
-      data: [44, 55, 57, 56, 61, 58, 63, 60, 66]
-    }, {
-      // name: 'Revenue',
-      data: [76, 85, 101, 98, 87, 105, 91, 114, 94]
-    }, {
-      // name: 'Free Cash Flow',
-      data: [35, 41, 36, 26, 45, 48, 52, 53, 41]
-    }]
-  )
-
+    legend: {
+      position: 'top',
+      horizontalAlign: 'left',
+      show: true,
+      markers: {
+        strokeColor: "#fff",
+        fillColors: ["#901CEE", "#C8F2E3", "#D1AAF0"],
+      },
+      itemMargin: {
+        vertical: 5,
+      },
+    },
+  });
+  const [series, setseries] = useState([
+    {
+      name: "Artists",
+      data: [44, 55, 57, 56, 61, 58, 63, 60, 66],
+    },
+    {
+      name: "NFTs Minted",
+      data: [76, 85, 101, 98, 87, 105, 91, 114, 94],
+    },
+    {
+      name: "NFTs Sold",
+      data: [35, 41, 36, 26, 45, 48, 52, 53, 41],
+    },
+  ]);
 
   function importAll(r) {
     let images = {};
-    r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
+    r.keys().map((item, index) => {
+      images[item.replace("./", "")] = r(item);
+    });
     return images;
   }
-  const images = importAll(require.context('assets/img/dashboardimg', false, /\.(png|jpe?g|svg)$/));
+  const images = importAll(
+    require.context("assets/img/dashboardimg", false, /\.(png|jpe?g|svg)$/)
+  );
 
   return (
     <>
@@ -134,12 +162,26 @@ function Dashboard() {
                     </div>
                     <div className="col-sm-3">
                       <div class="dropdown">
-                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button
+                          class="btn dropdown-toggle"
+                          type="button"
+                          id="dropdownMenuButton"
+                          data-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
                           Time
                         </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                          <a class="dropdown-item" href="#">Last Month</a>
-                          <a class="dropdown-item" href="#">Last Week</a>
+                        <div
+                          class="dropdown-menu"
+                          aria-labelledby="dropdownMenuButton"
+                        >
+                          <a class="dropdown-item" href="#">
+                            Last Month
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            Last Week
+                          </a>
                         </div>
                       </div>
                     </div>
@@ -148,7 +190,12 @@ function Dashboard() {
                     <div className="row ptb20">
                       <div className="col-sm-12 text-center">
                         <div id="chart">
-                          <ReactApexChart options={options} series={series} type="bar" height={350} />
+                          <ReactApexChart
+                            options={options}
+                            series={series}
+                            type="bar"
+                            height={350}
+                          />
                         </div>
                       </div>
                     </div>
@@ -171,7 +218,11 @@ function Dashboard() {
                 </div>
                 <div className="row ptb20">
                   <div className="col-sm-3 text-center">
-                    <img src={`${images['admin-img.png']['default']}`} alt="" className="img-fluid" />
+                    <img
+                      src={`${images["admin-img.png"]["default"]}`}
+                      alt=""
+                      className="img-fluid"
+                    />
                   </div>
                   <div className="col-sm-7 p-0">
                     <h3 className="">Ramon Miller</h3>
@@ -179,7 +230,6 @@ function Dashboard() {
                   </div>
                   <div className="col-sm-2 p-0">
                     <div class="switch">
-
                       <label class="switch">
                         <input type="checkbox" name="forSale" />
                         <span class="slider round"></span>
@@ -189,7 +239,11 @@ function Dashboard() {
                 </div>
                 <div className="row ptb20">
                   <div className="col-sm-3 text-center">
-                    <img src={`${images['admin-img.png']['default']}`} alt="" className="img-fluid" />
+                    <img
+                      src={`${images["admin-img.png"]["default"]}`}
+                      alt=""
+                      className="img-fluid"
+                    />
                   </div>
                   <div className="col-sm-7 p-0">
                     <h3 className="">Ramon Miller</h3>
@@ -197,14 +251,13 @@ function Dashboard() {
                   </div>
                   <div className="col-sm-2 p-0">
                     <div class="switch">
-
                       <label class="switch">
                         <input type="checkbox" name="forSale" />
                         <span class="slider round"></span>
                       </label>
                     </div>
                   </div>
-                </div>  
+                </div>
               </div>
 
               <div className="card">
@@ -220,10 +273,17 @@ function Dashboard() {
                 </div>
                 <div className="row ptb20">
                   <div className="col-sm-3 text-center">
-                    <img src={`${images['top-games-img-one.png']['default']}`} alt="" className="img-fluid" />
+                    <img
+                      src={`${images["top-games-img-one.png"]["default"]}`}
+                      alt=""
+                      className="img-fluid"
+                    />
                   </div>
                   <div className="col-sm-9">
-                    <h6 className="">REN Price Climbs to Record High, Benefiting From Ethereum Congestion</h6>
+                    <h6 className="">
+                      REN Price Climbs to Record High, Benefiting From Ethereum
+                      Congestion
+                    </h6>
                     <ul className="list-inline pt10">
                       <li className="list-inline-item">
                         <span className="circle"></span>&nbsp;
@@ -235,10 +295,17 @@ function Dashboard() {
                 </div>
                 <div className="row">
                   <div className="col-sm-3 text-center">
-                    <img src={`${images['top-games-img-one.png']['default']}`} alt="" className="img-fluid" />
+                    <img
+                      src={`${images["top-games-img-one.png"]["default"]}`}
+                      alt=""
+                      className="img-fluid"
+                    />
                   </div>
                   <div className="col-sm-9">
-                    <h6 className="">REN Price Climbs to Record High, Benefiting From Ethereum Congestion</h6>
+                    <h6 className="">
+                      REN Price Climbs to Record High, Benefiting From Ethereum
+                      Congestion
+                    </h6>
                     <ul className="list-inline pt10">
                       <li className="list-inline-item">
                         <span className="circle"></span>&nbsp;
@@ -250,10 +317,17 @@ function Dashboard() {
                 </div>
                 <div className="row ptb20">
                   <div className="col-sm-3 text-center">
-                    <img src={`${images['top-games-img-one.png']['default']}`} alt="" className="img-fluid" />
+                    <img
+                      src={`${images["top-games-img-one.png"]["default"]}`}
+                      alt=""
+                      className="img-fluid"
+                    />
                   </div>
                   <div className="col-sm-9">
-                    <h6 className="">REN Price Climbs to Record High, Benefiting From Ethereum Congestion</h6>
+                    <h6 className="">
+                      REN Price Climbs to Record High, Benefiting From Ethereum
+                      Congestion
+                    </h6>
                     <ul className="list-inline pt10">
                       <li className="list-inline-item">
                         <span className="circle"></span>&nbsp;
