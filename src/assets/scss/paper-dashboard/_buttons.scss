@@ -1,0 +1,96 @@
+
+
+// .common-button{
+//     background-color: #ffffff;
+//     outline: none;
+//     box-shadow: none;
+//     border-radius: 10px;
+//     font-size: 18px;
+//     border: none;
+//     width: 145px;
+//     height: 45px;
+// }
+// .main-header-top-change .button-header-nav{
+//     background-color: #ffffff;
+//     outline: none;
+//     border: none;
+//     width: 145px;
+//     height: 45px;
+//     border-radius: 10px;
+//     font-family: 'Nunito';
+//     font-style: normal;
+//     font-weight: 600;
+//     font-size: 14px;
+//     line-height: 19px;
+//     color: #4F4E69;
+//     margin-right: 20px;
+//     margin-left: 20px;
+//     transition: .4s ease-in-out;
+//     &:hover{
+//         box-shadow: 0 0.1rem 0.5rem rgb(194, 194, 199);
+//     }
+// }
+// .main-header-top-change .button-header-filter{
+//     background-color: #ffffff;
+//     outline: none;
+//     border: none;
+//     width: 145px;
+//     height: 45px;
+//     border-radius: 10px;
+//     font-family: 'Nunito';
+//     font-style: normal;
+//     font-weight: 600;
+//     font-size: 14px;
+//     line-height: 19px;
+//     color: #4F4E69;
+//     transition: .4s ease-in-out;
+//     &:hover{
+//         box-shadow: 0 0.1rem 0.5rem rgb(194, 194, 199);
+//     }
+// }
+
+
+.btn-common {
+  background: #901CEE;
+  box-shadow: 0px 10px 14px rgba(242, 177, 15, 0.3);
+  border-radius: 8px;
+    margin: 10px 0;
+    padding: 12px 30px;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    // font-size: 13px;
+    width: 100%;
+
+    &:hover {
+     color: #fff;
+    //  box-shadow: 0px 10px 14px rgba(33, 42, 56, 0.3);
+    //  background-color: linear-gradient(180deg, #133572 0%, #3568C1 100%);;
+   }
+   &:active {
+     color: #fff !important;
+    //  background-color: linear-gradient(180deg, #133572 0%, #3568C1 100%);;
+   }
+   &:focus {
+     outline: none;
+   }
+}
+
+
+ .ptb {
+    padding: 60px 0;
+}
+
+.btn-red{
+  background: #F15B46;
+  border: 1px solid #be3817;
+  box-sizing: border-box;
+  padding: 12px 30px;
+  border-radius: 30px;
+  color: #fff !important;
+  text-decoration: none;
+  // font-size: 13px;
+  width: 100%;
+
+}
+

@@ -1,0 +1,193 @@
+.content{
+    .main-edit-page{
+        padding: 40px 20px;
+        .inner-images{
+            margin-bottom: 50px;
+            padding: 60px 20px 80px;
+            .top-head{
+                border-bottom: 2px solid #ece9f58a;
+                h4{
+                    font-family: 'Nunito'!important;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 26px;
+                    line-height: 31px;
+                    text-transform: uppercase;
+                    color: #901CEE;
+                    padding-bottom: 20px;
+                }
+            }
+            .main-logo{
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: 32px;
+             
+                .left-side{
+                    background: #FFFFFF;
+                    border: 2px dashed #ece9f58a;
+                    box-sizing: border-box;
+                    border-radius: 12px;
+                    padding: 40px;
+                    height: 110px;
+                    margin-right: 70px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .right-side{
+                    background: #FFFFFF;
+                    border: 2px dashed #ece9f58a;
+                    box-sizing: border-box;
+                    border-radius: 12px;
+                    padding: 40px;
+                    height: 110px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+            .main-button{
+                .main-new-in{
+                    margin-bottom: 48px;
+                }
+                .buttons-addmore{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    margin-top: 60px;
+                    .main-inner-button{
+                       margin-right: 20px;
+                       margin-bottom: 30px;
+                        h5{
+                            background: #FFFFFF;
+                            padding: 20px 30px;
+                            border: 2px solid #ece9f58a;
+                            box-sizing: border-box;
+                            border-radius: 12px;
+                            font-family: 'Nunito'!important;
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 18px!important;
+                            line-height: 22px;
+                            text-transform: uppercase;
+                        }
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        button{
+                            background: #901CEE;
+                            border-radius: 12px;
+                            font-family: 'Nunito'!important;
+                            font-style: normal;
+                            font-weight: 700!important;
+                            font-size: 18px!important;
+                            line-height: 22px;
+                            height: 64px!important;
+                            padding-left: 20px;
+                            padding-right: 20px;
+                            text-transform: uppercase;
+                            border: none;
+                            color: #ffffff;
+                      
+                            img{
+                                float: left;
+                                padding-left: 0px!important;
+                                padding-right: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+            .button-drop{
+                .main-button{
+                    background: #FFFFFF;
+                    border: 2px solid #ece9f5d5!important;
+                    box-sizing: border-box;
+                    border-radius: 10px;
+                    height: 58px!important;
+                    padding: 10px 15px;
+                    color: #171B1C!important;
+                    width: 100%;
+                    text-align: left;
+                    img{
+                        float: right;
+                        padding-top: 6px;
+                    }
+                    &::placeholder{
+                      color: #e3e0e9e5!important;
+                    }
+                   
+                }
+                .dropdown-menu{
+                    width: 100%;
+                }
+            }
+            .buttonss{
+                button{
+                    background: #901CEE;
+                    border-radius: 12px;
+                    font-family: 'Nunito'!important;
+                    font-style: normal;
+                    font-weight: 700!important;
+                    font-size: 18px!important;
+                    line-height: 22px;
+                    height: 58px!important;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    text-transform: uppercase;
+                    border: none;
+                    color: #ffffff;
+                    margin-top: 20px;
+                    img{
+                        float: left;
+                        padding-left: 0px!important;
+                        padding-right: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.rightside-for-group{
+    input{
+        padding: 0px;
+        margin: 0px;
+        line-height: 0px;
+        height: 20px!important;
+        border: none!important;
+        line-height: 0px;
+    }
+    label{
+        font-family: 'Nunito'!important;
+        font-style: normal!important;
+        font-weight: 600!important;
+        font-size: 16px!important;
+        line-height: 19px!important;
+        color: #171B1C!important;
+    }
+  .dashed-border-new{
+      border: 1px dashed #C6C6C6;
+      box-sizing: border-box;
+      border-radius: 5px;
+      background-color: transparent;
+      height: 287px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      p{
+          font-family: 'Nunito';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 22px;
+          color: #CDCDCD;
+        
+      }
+      .main-image-div{
+          text-align: center;
+      }
+  }
+}
+

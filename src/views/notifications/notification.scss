@@ -1,0 +1,36 @@
+
+
+.notifications{
+    width: 100%;
+    min-height: 100vh;
+}
+
+.send-notifications{
+    width: 100%;
+    min-height: 100vh;
+    .inner-submit-lower-div{
+        .main-send-message{
+            h3{
+                font-family: 'Nunito';
+                font-style: normal;
+                font-weight: bold;
+                font-size: 24px;
+                line-height: 33px;
+                color: #030229;
+            }
+        }
+    }
+}
+
+
+@media(max-width: 360px){
+    .send-notifications{
+        .inner-submit-lower-div{
+            .main-send-message{
+                h3{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}

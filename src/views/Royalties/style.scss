@@ -1,0 +1,26 @@
+.content {
+    .table > thead > tr > th {
+        color: #c4c4c4;
+        padding: 0px !important;
+    }
+    .table > tbody > tr > td {
+        padding: 0px !important;
+        padding-top: 10px !important;
+    }
+    .tab-roy {
+        font-weight: 600;
+        font-size: 19px;
+        .selected {
+            color: #171B1C;
+            line-height: 23px;
+            border-bottom: 4px solid #901CEE;
+            padding-bottom: 8px;
+        }
+        .unselected {
+            color: #171B1C;
+            opacity: 0.4;
+            border-bottom: 4px solid #ECE9F5;
+            padding-bottom: 8px;
+        }
+    }
+}
