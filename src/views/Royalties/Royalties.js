@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import PaidTable from "./component/paidTable";
 import PendingTable from "./component/pendingTable"
+import axios from 'axios';
 import "./style.scss";
 // reactstrap components
+
 function Royalties() {
   const [tab, setTab] = useState(0);
 
@@ -16,6 +18,20 @@ function Royalties() {
   const images = importAll(
     require.context("assets/img/userflow", false, /\.(png|jpe?g|svg)$/)
   );
+
+  const getPaid = () => {
+
+  }
+
+  const getPending = () => {
+    
+  }
+
+  useEffect(()=>{
+    getPending();
+    getPaid();
+  },[])
+
   return (
     <>
       <div className="content">
@@ -52,7 +68,7 @@ function Royalties() {
                     <th>
                       {" "}
                       {/* <p className="thead">Item</p>  */}
-                      Item
+                      Collection Name
                       <img
                         src={`${images["arrow-down.svg"]["default"]}`}
                         className="pl-1"

@@ -64,8 +64,8 @@ function Dashboard() {
       },
     },
     legend: {
-      position: 'top',
-      horizontalAlign: 'left',
+      position: "top",
+      horizontalAlign: "left",
       show: true,
       markers: {
         strokeColor: "#fff",
@@ -109,8 +109,8 @@ function Dashboard() {
           <div className="row">
             <div className="col-sm-8 p-0">
               <div className="row">
-                <div className="col-sm-4 pl-0">
-                  <div className="card">
+                <div className="col-sm-4 pl-0 pr-0 pr-sm-2">
+                  <div className="card p-3">
                     <ul className="list-inline">
                       <li className="list-inline-item top">
                         <h5 className="grey">Total Artists</h5>
@@ -118,16 +118,16 @@ function Dashboard() {
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                       <li className="list-inline-item">
                         <div className="inner-content">
-                          <h6 className="common">View All</h6>
+                          <h6 className="common ">View All</h6>
                         </div>
                       </li>
                     </ul>
-                    <h2 className="common">8246</h2>
+                    <h2 className="common pt-3">8246</h2>
                   </div>
                 </div>
 
                 <div className="col-sm-4 p-0">
-                  <div className="card">
+                  <div className="card p-3">
                     <ul className="list-inline">
                       <li className="list-inline-item top">
                         <h5 className="grey">NFTs Minted</h5>
@@ -139,17 +139,17 @@ function Dashboard() {
                         </div>
                       </li>
                     </ul>
-                    <h2 className="common">17623</h2>
+                    <h2 className="common pt-3">17623</h2>
                   </div>
                 </div>
-                <div className="col-sm-4 pr-0">
-                  <div className="card">
+                <div className="col-sm-4 pr-0 pl-0 pl-sm-2">
+                  <div className="card p-3">
                     <ul className="list-inline">
                       <li className="list-inline-item top">
                         <h5 className="grey">Transactions</h5>
                       </li>
                     </ul>
-                    <h2 className="common">$1.2M</h2>
+                    <h2 className="common pt-3">$1.2M</h2>
                   </div>
                 </div>
               </div>
@@ -158,7 +158,7 @@ function Dashboard() {
                 <div className="col-sm-12 p-0">
                   <div className="row ptb20">
                     <div className="col-sm-9">
-                      <h3 className="">Statistics</h3>
+                      <h3 className="fs-30">Statistics</h3>
                     </div>
                     <div className="col-sm-3">
                       <div class="dropdown">
@@ -208,11 +208,11 @@ function Dashboard() {
               <div className="card">
                 <div className="row pt20">
                   <div className="col-sm-8">
-                    <h3 className="">Top Games</h3>
+                    <h3 className="">Top Artists</h3>
                   </div>
                   <div className="col-sm-4">
                     <Link to="playtoearn">
-                      <h6 className="common">View All</h6>
+                      <h6 className="common text-r">View All</h6>
                     </Link>
                   </div>
                 </div>
@@ -225,17 +225,17 @@ function Dashboard() {
                     />
                   </div>
                   <div className="col-sm-7 p-0">
-                    <h3 className="">Ramon Miller</h3>
+                    <h3 className="dark-text">Ramon Miller</h3>
                     <h6 className="grey">54 items</h6>
                   </div>
-                  <div className="col-sm-2 p-0">
+                  {/* <div className="col-sm-2 p-0">
                     <div class="switch">
                       <label class="switch">
                         <input type="checkbox" name="forSale" />
                         <span class="slider round"></span>
                       </label>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
                 <div className="row ptb20">
                   <div className="col-sm-3 text-center">
@@ -246,28 +246,28 @@ function Dashboard() {
                     />
                   </div>
                   <div className="col-sm-7 p-0">
-                    <h3 className="">Ramon Miller</h3>
+                    <h3 className="dark-text">Ramon Miller</h3>
                     <h6 className="grey">54 items</h6>
                   </div>
-                  <div className="col-sm-2 p-0">
+                  {/* <div className="col-sm-2 p-0">
                     <div class="switch">
                       <label class="switch">
                         <input type="checkbox" name="forSale" />
                         <span class="slider round"></span>
                       </label>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
 
               <div className="card">
                 <div className="row pt20">
                   <div className="col-sm-8">
-                    <h3 className="">Latest Videos</h3>
+                    <h3 className="">Top Items</h3>
                   </div>
                   <div className="col-sm-4">
                     <Link to="videos">
-                      <h6 className="common">View All</h6>
+                      <h6 className="common text-r">View All</h6>
                     </Link>
                   </div>
                 </div>
@@ -280,17 +280,8 @@ function Dashboard() {
                     />
                   </div>
                   <div className="col-sm-9">
-                    <h6 className="">
-                      REN Price Climbs to Record High, Benefiting From Ethereum
-                      Congestion
-                    </h6>
-                    <ul className="list-inline pt10">
-                      <li className="list-inline-item">
-                        <span className="circle"></span>&nbsp;
-                        <span className="grey">BNB</span>&nbsp;&nbsp;&nbsp;
-                        <span className="grey">2.3K Views</span>
-                      </li>
-                    </ul>
+                    <h3 className="dark-text">Ramon Miller</h3>
+                    <h6 className="grey">54 items</h6>
                   </div>
                 </div>
                 <div className="row">
@@ -302,17 +293,8 @@ function Dashboard() {
                     />
                   </div>
                   <div className="col-sm-9">
-                    <h6 className="">
-                      REN Price Climbs to Record High, Benefiting From Ethereum
-                      Congestion
-                    </h6>
-                    <ul className="list-inline pt10">
-                      <li className="list-inline-item">
-                        <span className="circle"></span>&nbsp;
-                        <span className="grey">BNB</span>&nbsp;&nbsp;&nbsp;
-                        <span className="grey">2.3K Views</span>
-                      </li>
-                    </ul>
+                    <h3 className="dark-text">Ramon Miller</h3>
+                    <h6 className="grey">54 items</h6>
                   </div>
                 </div>
                 <div className="row ptb20">
@@ -324,17 +306,8 @@ function Dashboard() {
                     />
                   </div>
                   <div className="col-sm-9">
-                    <h6 className="">
-                      REN Price Climbs to Record High, Benefiting From Ethereum
-                      Congestion
-                    </h6>
-                    <ul className="list-inline pt10">
-                      <li className="list-inline-item">
-                        <span className="circle"></span>&nbsp;
-                        <span className="grey">BNB</span>&nbsp;&nbsp;&nbsp;
-                        <span className="grey">2.3K Views</span>
-                      </li>
-                    </ul>
+                    <h3 className="dark-text">Ramon Miller</h3>
+                    <h6 className="grey">54 items</h6>
                   </div>
                 </div>
               </div>

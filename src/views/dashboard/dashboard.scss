@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap');
 
 .main-dashboard{
-    .inner-content {
-        // padding: 20px 15px;
 
+    .fs-30 {
+        font-size: 30px !important;
     }
 
     .pr-0{
@@ -32,8 +32,19 @@
             font-size: 12px;
             margin-top: 5px;
         }
+        .text-r {
+            text-align: right;
+        }
         h5 {
             font-size: 18px;
+        }
+
+        h3 {
+            color: #6A6D6D;
+        }
+
+        .dark-text {
+            color: #171B1C;
         }
 
         li.top {

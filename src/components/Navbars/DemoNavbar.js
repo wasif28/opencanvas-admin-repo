@@ -66,7 +66,7 @@ function Header(props) {
       if (window.location.href.indexOf(prop.layout + prop.path) !== -1) {
         // brandname = prop.name;
         setbrandName(prop.name)
-        console.log(brandName)
+        // console.log(brandName)
       }
       return null;
     });
@@ -150,12 +150,12 @@ useEffect(() => {
               </InputGroup>
             </form> */}
 
-            <div className="profile-image">
+            {/* <div className="profile-image">
               <img src={`${images['image-profile.png']['default']}`} className="back-img" alt="" />
-            </div>
+            </div> */}
             <div className="dropdown drop-seller">
               <button class="button-seller" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-               Abdullah<img src={`${images['image-profile-2.png']['default']}`} className="back-img" alt="" />
+                <img src={`${images['image-profile.png']['default']}`} className="back-img" alt="" />
               </button>
               <div className="dropdown-menu drop-mainn" aria-labelledby="dropdownMenuButton">
                 <Link to={`/admin/editprofile`} className="dropdown-item">Edit Profile</Link>

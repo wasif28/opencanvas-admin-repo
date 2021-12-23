@@ -47,9 +47,6 @@ function Users() {
                                 </div>
                             </div>
                         </div>
-
-
-
                     </div>
                     <div className="row">
                         <div className="col-sm-12 p-0">
