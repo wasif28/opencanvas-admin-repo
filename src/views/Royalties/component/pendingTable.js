@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 
-const PendingTable = () => {
+const PendingTable = ({item}) => {
+
+  console.log("item",item)
+
   function importAll(r) {
     let images = {};
     r.keys().map((item, index) => {
@@ -18,12 +21,15 @@ const PendingTable = () => {
           <ul className="d-flex justify-content-start align-items-center">
             <li>
               <img
-                src={`${images["user2.svg"]["default"]}`}
+                width={70}
+                width={70}
+                // src={`${images["user2.svg"]["default"]}`}
+                src={item?.collection?.image}
                 className="pr-2 imgages-no"
                 alt=""
               />
             </li>
-            <li className="darkgray">fast food</li>
+            <li className="darkgray">{item?.collection?.name}</li>
           </ul>
         </Link>
       </td>
@@ -31,15 +37,18 @@ const PendingTable = () => {
         <ul className="d-flex justify-content-start align-items-center">
           <li>
             <img
-              src={`${images["user2.png"]["default"]}`}
-              className="pr-2 imgages-no"
+              width={60}
+              // src={`${images["user2.svg"]["default"]}`}
+              src={item?.creator?.picture}
+              // src={`${images["user2.png"]["default"]}`}
+              className="pr-2 rounded-full imgages-no"
               alt=""
             />
           </li>
           <li className="grey">Ramon Miller</li>
         </ul>
       </td>
-      <td className="grey">0.02 ETH</td>
+      <td className="grey">{item?.royaltiesAmount/(10** 18)} ETH</td>
       <td className="grey">2</td>
     </tr>
   );

@@ -1,13 +1,20 @@
 import React, { useEffect, useState } from "react";
 import PaidTable from "./component/paidTable";
 import PendingTable from "./component/pendingTable";
+import Environment from "../../utils/environment";
 import CONFIRMModal from "components/modals";
+import { useHistory } from "react-router-dom";
 import axios from "axios";
 import "./style.scss";
 // reactstrap components
 
 function Royalties() {
+  const history = useHistory();
   const [tab, setTab] = useState(0);
+  const [pending, setPending] = useState([]);
+  const [paid, setPaid] = useState([]);
+  const [loader, setLoader] = useState(false);
+  const api_url = Environment.base_url;
 
   const getConfirmation = () => {
     window.$("#exampleModalLong3").modal("show");
@@ -29,29 +36,79 @@ function Royalties() {
   );
 
   const getPaid = () => {
-    // let getToken = localStorage.getItem("token");
-    // var config = {
-    //   method: "get",
-    //   url: "",
-    //   headers: {
-    //     "auth-token": getToken,
-    //   },
-    // };
-    // axios(config)
-    //   .then(function (response) {
-    //     setUser(response.data);
-    //   })
-    //   .catch(function (error) {
-    //     console.log(error)
-    //   });
+    let getToken = localStorage.getItem("openCanvasToken");
+    var config = {
+      method: "get",
+      url: `${api_url}/royalties/getPaidRoyalties`,
+      headers: {
+        authorization: `Bearer ${getToken}`,
+      },
+    };
+    axios(config)
+      .then(function (response) {
+        cancelModal();
+        setPaid(response.data);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   };
 
-  const getPending = () => {};
+  const token = localStorage.getItem("openCanvasToken");
+
+  const getPending = () => {
+    let getToken = localStorage.getItem("openCanvasToken");
+    var config = {
+      method: "get",
+      url: `${api_url}/royalties/getPendingRoyalties`,
+      headers: {
+        authorization: `Bearer ${getToken}`,
+      },
+    };
+    axios(config)
+      .then(function (response) {
+        setPending(response.data);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  };
 
   useEffect(() => {
-    getPending();
-    getPaid();
+    if (token === "null") {
+      history.push("/adminlogin");
+    } else {
+      getPending();
+      getPaid();
+    }
   }, []);
+
+  const payAll = () => {
+    let getToken = localStorage.getItem("openCanvasToken");
+    setLoader(true);
+    // setError(null);
+    var data = JSON.stringify({
+    });
+
+    var config = {
+      method: "post",
+      url: `${api_url}/royalties/payToAllPending`,
+      headers: {
+        "Content-Type": "application/json",
+        "authorization": `Bearer ${getToken}`,
+      },
+      data: data,
+    };
+
+    axios(config)
+      .then(function (response) {
+        console.log("response", response);
+        setLoader(false);
+      })
+      .catch(function (error) {
+        setLoader(false);
+      });
+  };
 
   return (
     <>
@@ -65,6 +122,8 @@ function Royalties() {
           aria-hidden="true"
         >
           <CONFIRMModal
+            loader={loader}
+            payAll={payAll}
             cancelModal={cancelModal}
             title="Pay All"
             mainBtn="Pay"
@@ -157,9 +216,19 @@ function Royalties() {
                     </th>
                   </tr>
                 </thead>
-                <tbody className="main-t-body-text">
-                  {tab === 0 ? <PendingTable /> : <PaidTable />}
-                </tbody>
+                {tab === 0 ? (
+                  <tbody className="main-t-body-text">
+                    {pending.map((item, index) => {
+                      return <PendingTable key={index} item={item} />;
+                    })}
+                  </tbody>
+                ) : (
+                  <tbody className="main-t-body-text">
+                    {paid.map((item, index) => {
+                      return <PaidTable key={index} item={item} />;
+                    })}
+                  </tbody>
+                )}
               </table>
             </div>
           </div>

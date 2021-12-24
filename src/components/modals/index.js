@@ -1,7 +1,20 @@
 // import Success from "../../../Assets/success.png";
 import "./style.scss"
 
-const ConfirmModal = ({ title, mainBtn, content, cancelModal }) => {
+const ConfirmModal = ({ title, mainBtn, content, cancelModal, payAll, loader }) => {
+
+  function importAll(r) {
+    let images = {};
+    r.keys().map((item, index) => {
+      images[item.replace("./", "")] = r(item);
+    });
+    return images;
+  }
+
+  const imagess2 = importAll(
+    require.context("assets/img", false, /\.(png|jpe?g|svg)$/)
+  );
+
   return (
     <div className="modal-dialog"  role="document">
       <div className="modal-content">
@@ -27,7 +40,19 @@ const ConfirmModal = ({ title, mainBtn, content, cancelModal }) => {
                 </p>
                 <ul className="list-inline btn-div text-center px-5 pt-4">
                   <li className="list-inline-item w-100 pb-3">
-                    <button className="btn-common w-25 mr-2">{mainBtn}</button>
+                    <button onClick={()=>payAll()} className="btn-common w-25 mr-2">
+                      {loader ? (
+                        <img
+                          width="25px"
+                          src={`${imagess2["loader.svg"]["default"]}`}
+                          alt=""
+                        />
+                      ) : (
+                        <>
+                          {mainBtn}
+                        </>
+                      )}
+                    </button>
                     <button onClick={()=>cancelModal()} className="w-25 ml-2 btn shadow-none"><p className="cancel">{"Cancel"}</p></button>
                   </li>
                 </ul>
