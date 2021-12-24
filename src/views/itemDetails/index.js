@@ -1,11 +1,12 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Bid from "./components/bid";
 import History from "./components/history";
 import Additional from "./components/additional";
 import "./style.scss";
 
 function Dashboard() {
-  const [tab, setTab] = useState("info");
+  const [tab, setTab] = useState("bid");
   function importAll(r) {
     let images = {};
     r.keys().map((item, index) => {
@@ -135,6 +136,12 @@ function Dashboard() {
                         {tab === "info" && <Additional />}
                       </div>
                     </div>
+                  </div>
+                  <div
+                    className="mt-5 d-flex align-items-center justify-content-end px-5"
+                  >
+                      <button className="btn-red mr-3">Block Item</button>
+                      <a href="/admin/nfts"><p className="cancel">{"Cancel"}</p></a>
                   </div>
                 </div>
               </div>

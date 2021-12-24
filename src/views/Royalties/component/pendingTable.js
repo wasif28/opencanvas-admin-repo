@@ -39,7 +39,7 @@ const PendingTable = () => {
           <li className="grey">Ramon Miller</li>
         </ul>
       </td>
-      <td className="grey">0.2 ETH</td>
+      <td className="grey">0.02 ETH</td>
       <td className="grey">2</td>
     </tr>
   );

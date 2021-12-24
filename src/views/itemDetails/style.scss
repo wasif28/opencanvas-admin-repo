@@ -95,6 +95,9 @@
             }
         }
     }
+    .cancel {
+      display: none;
+    }
     @media only screen and (max-width: 1450px) {
         .bord-left {
             border-left: 1px solid #fff;
