@@ -5,6 +5,8 @@ import Environment from "../../utils/environment";
 import CONFIRMModal from "components/modals";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import "./style.scss";
 // reactstrap components
 
@@ -14,6 +16,7 @@ function Royalties() {
   const [pending, setPending] = useState([]);
   const [paid, setPaid] = useState([]);
   const [loader, setLoader] = useState(false);
+  const [mainLoader, setMainLoader] = useState(false);
   const api_url = Environment.base_url;
 
   const getConfirmation = () => {
@@ -35,8 +38,13 @@ function Royalties() {
     require.context("assets/img/userflow", false, /\.(png|jpe?g|svg)$/)
   );
 
+  const images2 = importAll(
+    require.context("assets/img", false, /\.(png|jpe?g|svg)$/)
+  );
+
   const getPaid = () => {
     let getToken = localStorage.getItem("openCanvasToken");
+    setMainLoader(true);
     var config = {
       method: "get",
       url: `${api_url}/royalties/getPaidRoyalties`,
@@ -46,17 +54,19 @@ function Royalties() {
     };
     axios(config)
       .then(function (response) {
-        cancelModal();
         setPaid(response.data);
+        setMainLoader(false);
       })
       .catch(function (error) {
         console.log(error);
+        setMainLoader(false);
       });
   };
 
   const token = localStorage.getItem("openCanvasToken");
 
   const getPending = () => {
+    setMainLoader(true);
     let getToken = localStorage.getItem("openCanvasToken");
     var config = {
       method: "get",
@@ -68,8 +78,10 @@ function Royalties() {
     axios(config)
       .then(function (response) {
         setPending(response.data);
+        setMainLoader(false);
       })
       .catch(function (error) {
+        setMainLoader(false);
         console.log(error);
       });
   };
@@ -78,24 +90,26 @@ function Royalties() {
     if (token === "null") {
       history.push("/adminlogin");
     } else {
-      getPending();
-      getPaid();
+      if(tab===0 && pending?.length === 0){
+        getPending();
+      } else if(tab===1 && paid?.length === 0) {
+        getPaid();
+      }
     }
-  }, []);
+  }, [tab]);
 
   const payAll = () => {
     let getToken = localStorage.getItem("openCanvasToken");
     setLoader(true);
     // setError(null);
-    var data = JSON.stringify({
-    });
+    var data = JSON.stringify({});
 
     var config = {
       method: "post",
       url: `${api_url}/royalties/payToAllPending`,
       headers: {
         "Content-Type": "application/json",
-        "authorization": `Bearer ${getToken}`,
+        authorization: `Bearer ${getToken}`,
       },
       data: data,
     };
@@ -103,9 +117,12 @@ function Royalties() {
     axios(config)
       .then(function (response) {
         console.log("response", response);
+        toast("All Royalties Paid Successfully!");
+        cancelModal();
         setLoader(false);
       })
       .catch(function (error) {
+        toast("Transactions failed!");
         setLoader(false);
       });
   };
@@ -113,6 +130,7 @@ function Royalties() {
   return (
     <>
       <div className="content">
+        <ToastContainer />
         <div
           className="modal fade"
           id="exampleModalLong3"
@@ -131,7 +149,7 @@ function Royalties() {
           />
         </div>
         <section className="users card">
-          <div className="container-fluid">
+          <div className="container-fluid position-relative">
             <div className="d-flex justify-content-between align-items-center pt-3 pb-2 tab-roy">
               <div className="d-flex justify-content-start align-items-center">
                 <button
@@ -165,21 +183,21 @@ function Royalties() {
                 {tab === 0 && (
                   <button
                     type="button"
+                    disabled={pending?.length===0}
                     onClick={() => getConfirmation()}
-                    className="btn shadow-none btn-common m-0 px-3 p-2"
+                    className={"btn shadow-none btn-common m-0 px-3 p-2 "+ (pending?.length===0?"cursor-not-allowed":"cursor-pointer")}
                   >
                     Pay All
                   </button>
                 )}
               </div>
             </div>
-            <div class="table-responsive">
+            <div class="table-responsive p">
               <table class="table ">
                 <thead>
                   <tr>
                     <th>
                       {" "}
-                      {/* <p className="thead">Item</p>  */}
                       Collection Name
                       <img
                         src={`${images["arrow-down.svg"]["default"]}`}
@@ -217,17 +235,74 @@ function Royalties() {
                   </tr>
                 </thead>
                 {tab === 0 ? (
-                  <tbody className="main-t-body-text">
-                    {pending.map((item, index) => {
-                      return <PendingTable key={index} item={item} />;
-                    })}
-                  </tbody>
+                  <>
+                    {mainLoader ? (
+                      <div
+                        className="d-flex justify-content-center items-center position-absolute mt-5"
+                        style={{ width: "95%" }}
+                      >
+                        <img
+                          src={`${images2["mainloader.svg"]["default"]}`}
+                          className="pl-1"
+                          alt=""
+                        />
+                      </div>
+                    ) : (
+                      <tbody className="main-t-body-text">
+                        {pending?.length === 0 ? (
+                          <p
+                            className="text-center pt-5 position-absolute"
+                            style={{ width: "95%" }}
+                          >
+                            No Data to Show
+                          </p>
+                        ) : (
+                          <>
+                            {pending.map((item, index) => {
+                              return <PendingTable key={index} item={item} />;
+                            })}
+                          </>
+                        )}
+                      </tbody>
+                    )}
+                  </>
                 ) : (
-                  <tbody className="main-t-body-text">
-                    {paid.map((item, index) => {
-                      return <PaidTable key={index} item={item} />;
-                    })}
-                  </tbody>
+                  <>
+                    {mainLoader ? (
+                      <div
+                        className="d-flex justify-content-center items-center position-absolute mt-5"
+                        style={{ width: "95%" }}
+                      >
+                        <img
+                          src={`${images2["mainloader.svg"]["default"]}`}
+                          className="pl-1"
+                          alt=""
+                        />
+                      </div>
+                    ) : (
+                      <tbody className="main-t-body-text">
+                        {paid?.length === 0 ? (
+                          <p
+                            className="text-center pt-5 position-absolute"
+                            style={{ width: "95%" }}
+                          >
+                            No Data to Show
+                          </p>
+                        ) : (
+                          <>
+                            {paid.map((item, index) => {
+                              return <PaidTable key={index} item={item} />;
+                            })}
+                          </>
+                        )}
+                      </tbody>
+                    )}
+                  </>
+                  // <tbody className="main-t-body-text">
+                  //   {paid.map((item, index) => {
+                  //     return <PaidTable key={index} item={item} />;
+                  //   })}
+                  // </tbody>
                 )}
               </table>
             </div>
