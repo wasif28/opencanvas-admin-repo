@@ -13,52 +13,85 @@ export const DistributeMultiple = () => {
   const DisperseMulti = useCallback(
     async (allTotal, walletArr, userPrices) => {
       try {
-        console.log("total value::::", allTotal);
+        // allTotal = 0;
+        // const tempArray = [...userPrices];
+        // for (let elem = 0; elem < tempArray.length; elem++) {
+        //   tempArray[elem] = web3.utils.toWei(
+        //     JSON.stringify(tempArray[elem]),
+        //     "ether"
+        //   );
+        //   allTotal += parseInt(tempArray[elem]);
+        // }
+        // // console.log("total sum::::", sum);
 
-        const tempArray = [...userPrices];
-        for (let elem = 0; elem < tempArray.length; elem++) {
-          tempArray[elem] = new BigNumber(tempArray[elem]).multipliedBy(
-            new BigNumber(10).pow(18)
-          );
-        }
+        // console.log("total::::", allTotal);
 
-        const gas1 = await contract.methods
-          .distributeMultiple(walletArr, tempArray)
-          .estimateGas({
-            from: account,
-            value: new BigNumber(allTotal).multipliedBy(
-              new BigNumber(10).pow(18)
-            ),
-            gasPrice: "10000000000",
-          });
+        // console.log("logs arr:::::", walletArr, tempArray);
+
+        // const gas1 = await contract.methods
+        //   .distributeMultiple(walletArr, tempArray)
+        //   .estimateGas({
+        //     from: account,
+        //     value: allTotal,
+        //     gasPrice: "1000000000",
+        //   });
+
+        // allTotal = parseFloat(
+        //   web3.utils.fromWei(JSON.stringify(allTotal), "ether")
+        // );
+
+        // console.log("total::::", allTotal);
+
         // return 0;
         // let dummy = 3000 * allTotal?.length;
-        let gas = new BigNumber(gas1).plus(new BigNumber("21000"));
-        let trxPrice = gas.multipliedBy(new BigNumber("10000000000"));
-        trxPrice = new BigNumber(trxPrice).dividedBy(new BigNumber(10).pow(18));
+        // let gas = parseInt(gas1) + 26000;
+        // let trxPrice = gas * 1050000000;
+        // trxPrice = web3.utils.fromWei(JSON.stringify(trxPrice), "ether");
 
-        let bnbNeedPerTx = trxPrice / userPrices.length;
+        // let bnbNeedPerTx = trxPrice / userPrices.length;
 
-        console.log("trxPrice", trxPrice);
-        console.log("bnbNeedPerTx", bnbNeedPerTx);
+        // console.log("trxPrice", trxPrice);
+        // console.log("bnbNeedPerTx", bnbNeedPerTx);
+        // allTotal = 0;
+
+        // for (let elem = 0; elem < userPrices.length; elem++) {
+        //   userPrices[elem] = web3.utils.toWei(
+        //     JSON.stringify(userPrices[elem] - bnbNeedPerTx),
+        //     "ether"
+        //   );
+        //   allTotal += parseInt(userPrices[elem]);
+        // }
+
+        // let toSend = allTotal - parseInt(web3.utils.toWei(trxPrice , 'ether'));
+        // toSend = new BigNumber(toSend).multipliedBy(new BigNumber(10).pow(18));
+        // toSend = toSend.plus(new BigNumber(100))
+        // console.log("userPrices", userPrices);
+
+        allTotal = 0;
+        const gasInBNB = 0.0010;
+        const gas = 35000;
+        const gasTotal = gas * walletArr.length;
 
         for (let elem = 0; elem < userPrices.length; elem++) {
-          userPrices[elem] = new BigNumber(
-            userPrices[elem] - bnbNeedPerTx
-          ).multipliedBy(new BigNumber(10).pow(18));
+          userPrices[elem] = web3.utils.toWei(
+            JSON.stringify(userPrices[elem] - gasInBNB), "ether"
+          )
+          allTotal += parseInt(userPrices[elem])
         }
 
-        let toSend = allTotal - trxPrice;
-        toSend = new BigNumber(toSend).multipliedBy(new BigNumber(10).pow(18));
-        // toSend = toSend.plus(new BigNumber(100))
-        console.log("userPrices", userPrices);
+        const toSend = allTotal;
+
+        console.log("gas",gasInBNB)
+        console.log("gasTotal",gasTotal)
+        console.log("toSend",toSend)
+
         const nfts = await contract.methods
           .distributeMultiple(walletArr, userPrices)
           .send({
             from: account,
-            gas: gas,
+            gas: gasTotal.toString(),
             gasPrice: "10000000000",
-            value: toSend,
+            value: toSend.toString(),
           })
           .on("transactionHash", (tx) => {
             return tx.transactionHash;

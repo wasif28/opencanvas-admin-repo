@@ -144,7 +144,7 @@ function Royalties() {
           setMainLoader(false);
         });
     }else {
-      toast("Transactions cancelled by user!");
+      toast("Transactions cancelled!");
       setMainLoader(false);
     }
   };
