@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 
 const PendingTable = ({item}) => {
 
-  console.log("item",item)
 
   function importAll(r) {
     let images = {};
@@ -48,7 +47,7 @@ const PendingTable = ({item}) => {
           <li className="grey">Ramon Miller</li>
         </ul>
       </td>
-      <td className="grey">{item?.royaltiesAmount/(10** 18)} ETH</td>
+      <td className="grey">{item?.royaltiesAmount} ETH</td>
       <td className="grey">2</td>
     </tr>
   );

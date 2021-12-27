@@ -42,9 +42,9 @@ function EditProfiles() {
                                         </div>
                                         <div className="row pt-4 pt-lg-0">
                                             <div className="col-lg-6 col-md-6">
-                                                <div class="form-group">
+                                                <div className="form-group">
                                                     <label for="example">First Name</label>
-                                                    <input type="text" class="form-control" id="example" aria-describedby="text" placeholder="Enter your username" />
+                                                    <input type="text" className="form-control" id="example" aria-describedby="text" placeholder="Enter your username" />
                                                     {/* {Object.keys(projectNameError).map((key)=>{
                                                           console.log("key",key);
                                                          return <p className="inputErrors">{projectNameError[key]}</p>
@@ -52,9 +52,9 @@ function EditProfiles() {
                                                 </div>
                                             </div>
                                             <div className="col-lg-6 col-md-6">
-                                                <div class="form-group">
+                                                <div className="form-group">
                                                     <label for="example">Last Name</label>
-                                                    <input type="text" class="form-control" id="example" aria-describedby="text" placeholder="Enter your full name" />
+                                                    <input type="text" className="form-control" id="example" aria-describedby="text" placeholder="Enter your full name" />
                                                     {/* {Object.keys(projectNameError).map((key)=>{
                                                           console.log("key",key);
                                                          return <p className="inputErrors">{projectNameError[key]}</p>
@@ -62,9 +62,9 @@ function EditProfiles() {
                                                 </div>
                                             </div>
                                             <div className="col-lg-6 col-md-6">
-                                                <div class="form-group">
+                                                <div className="form-group">
                                                     <label for="example">Username</label>
-                                                    <input type="text" class="form-control" id="example" aria-describedby="text" placeholder="Enter your email address" />
+                                                    <input type="text" className="form-control" id="example" aria-describedby="text" placeholder="Enter your email address" />
                                                     {/* {Object.keys(projectNameError).map((key)=>{
                                                           console.log("key",key);
                                                          return <p className="inputErrors">{projectNameError[key]}</p>
@@ -72,9 +72,9 @@ function EditProfiles() {
                                                 </div>
                                             </div>
                                             <div className="col-lg-6 col-md-6">
-                                                <div class="form-group">
+                                                <div className="form-group">
                                                     <label for="example">Email Address</label>
-                                                    <input type="text" class="form-control" id="example" aria-describedby="text" placeholder="Enter your phone no" />
+                                                    <input type="text" className="form-control" id="example" aria-describedby="text" placeholder="Enter your phone no" />
                                                     {/* {Object.keys(projectNameError).map((key)=>{
                                                           console.log("key",key);
                                                          return <p className="inputErrors">{projectNameError[key]}</p>
@@ -82,9 +82,9 @@ function EditProfiles() {
                                                 </div>
                                             </div>
                                             <div className="col-lg-6 col-md-6">
-                                                <div class="form-group">
+                                                <div className="form-group">
                                                     <label for="example">Contact</label>
-                                                    <input type="text" class="form-control" id="example" aria-describedby="text" placeholder="Enter your contact number" />
+                                                    <input type="text" className="form-control" id="example" aria-describedby="text" placeholder="Enter your contact number" />
                                                     {/* {Object.keys(projectNameError).map((key)=>{
                                                           console.log("key",key);
                                                          return <p className="inputErrors">{projectNameError[key]}</p>
@@ -92,9 +92,9 @@ function EditProfiles() {
                                                 </div>
                                             </div>
                                             <div className="col-lg-6 col-md-6">
-                                                <div class="form-group">
+                                                <div className="form-group">
                                                     <label for="example">Password</label>
-                                                    <input type="text" class="form-control" id="example" aria-describedby="text" placeholder="*********" />
+                                                    <input type="text" className="form-control" id="example" aria-describedby="text" placeholder="*********" />
                                                     {/* {Object.keys(projectNameError).map((key)=>{
                                                           console.log("key",key);
                                                          return <p className="inputErrors">{projectNameError[key]}</p>
@@ -122,10 +122,10 @@ function EditProfiles() {
                                     </div>
                                 </div>
                                 <div className="main-modal-one">
-                                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog daily-profile-modal">
-                                            <div class="modal-content daily-profile-modal-inner">
-                                                <div class="modal-body modal-body-main">
+                                    <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div className="modal-dialog daily-profile-modal">
+                                            <div className="modal-content daily-profile-modal-inner">
+                                                <div className="modal-body modal-body-main">
                                                     <div className="main-outter">
                                                         <div className="row main-cardssss">
                                                             <div className="col-md-12 col-12">
@@ -134,9 +134,9 @@ function EditProfiles() {
                                                                 </div>
                                                             </div>
                                                             <div className="col-12">
-                                                                <div class="form-group">
+                                                                <div className="form-group">
                                                                     <label for="example">Old Password</label>
-                                                                    <input type="text" class="form-control" id="example" aria-describedby="text" placeholder="Enter Your old password" />
+                                                                    <input type="text" className="form-control" id="example" aria-describedby="text" placeholder="Enter Your old password" />
                                                                     {/* {Object.keys(projectNameError).map((key)=>{
                                                           console.log("key",key);
                                                          return <p className="inputErrors">{projectNameError[key]}</p>
@@ -144,9 +144,9 @@ function EditProfiles() {
                                                                 </div>
                                                             </div>
                                                             <div className="col-12">
-                                                                <div class="form-group">
+                                                                <div className="form-group">
                                                                     <label for="example">New Password</label>
-                                                                    <input type="text" class="form-control" id="example" aria-describedby="text" placeholder="Enter Your new password" />
+                                                                    <input type="text" className="form-control" id="example" aria-describedby="text" placeholder="Enter Your new password" />
                                                                     {/* {Object.keys(projectNameError).map((key)=>{
                                                           console.log("key",key);
                                                          return <p className="inputErrors">{projectNameError[key]}</p>
@@ -154,9 +154,9 @@ function EditProfiles() {
                                                                 </div>
                                                             </div>
                                                             <div className="col-12">
-                                                                <div class="form-group">
+                                                                <div className="form-group">
                                                                     <label for="example">Conform Password</label>
-                                                                    <input type="text" class="form-control" id="example" aria-describedby="text" placeholder="Enter Your new password" />
+                                                                    <input type="text" className="form-control" id="example" aria-describedby="text" placeholder="Enter Your new password" />
                                                                     {/* {Object.keys(projectNameError).map((key)=>{
                                                           console.log("key",key);
                                                          return <p className="inputErrors">{projectNameError[key]}</p>

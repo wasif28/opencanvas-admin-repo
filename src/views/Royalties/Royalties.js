@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import PaidTable from "./component/paidTable";
 import PendingTable from "./component/pendingTable";
-import Environment from "../../utils/environment";
+import Environment from "../../utils/Environment";
 import CONFIRMModal from "components/modals";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import DistributeMultiple from "../../hooks/distributeMultiple";
+import "react-toastify/dist/ReactToastify.css";
 import "./style.scss";
 // reactstrap components
 
@@ -18,6 +19,7 @@ function Royalties() {
   const [loader, setLoader] = useState(false);
   const [mainLoader, setMainLoader] = useState(false);
   const api_url = Environment.base_url;
+  const { DisperseMulti } = DistributeMultiple();
 
   const getConfirmation = () => {
     window.$("#exampleModalLong3").modal("show");
@@ -90,41 +92,61 @@ function Royalties() {
     if (token === "null") {
       history.push("/adminlogin");
     } else {
-      if(tab===0 && pending?.length === 0){
+      if (tab === 0 && pending?.length === 0) {
         getPending();
-      } else if(tab===1 && paid?.length === 0) {
+      } else if (tab === 1 && paid?.length === 0) {
         getPaid();
       }
     }
   }, [tab]);
 
-  const payAll = () => {
+  const payAll = async () => {
     let getToken = localStorage.getItem("openCanvasToken");
-    setLoader(true);
-    // setError(null);
-    var data = JSON.stringify({});
-
-    var config = {
-      method: "post",
-      url: `${api_url}/royalties/payToAllPending`,
-      headers: {
-        "Content-Type": "application/json",
-        authorization: `Bearer ${getToken}`,
-      },
-      data: data,
-    };
-
-    axios(config)
-      .then(function (response) {
-        console.log("response", response);
-        toast("All Royalties Paid Successfully!");
-        cancelModal();
-        setLoader(false);
-      })
-      .catch(function (error) {
-        toast("Transactions failed!");
-        setLoader(false);
+    cancelModal();
+    setMainLoader(true);
+    let walletArr = [];
+    let userPrices = [];
+    let allTotal = 0;
+    let dummArr = [];
+    for (let _i of pending) {
+      walletArr.push(_i?.creator?.walletAddress);
+      allTotal = allTotal + _i?.royaltiesAmount;
+      userPrices.push(_i?.royaltiesAmount);
+      let objt = {
+        tokenID: _i?.tokenID,
+        contractAddress: _i?.contractAddress,
+      };
+      dummArr.push(objt);
+    }
+    const res = await DisperseMulti(allTotal, walletArr, userPrices);
+    await console.log("asd",res)
+    if (res) {
+      var data = JSON.stringify({
+        array: dummArr,
       });
+      var config = {
+        method: "post",
+        url: `http://192.168.18.40:3000/v1/royalties/payToMultiplePending`,
+        headers: {
+          "Content-Type": "application/json",
+          authorization: `Bearer ${getToken}`,
+        },
+        data: data,
+      };
+      axios(config)
+        .then(function (response) {
+          toast("All Royalties Paid Successfully!");
+          getPending();
+          setMainLoader(false);
+        })
+        .catch(function (error) {
+          toast("Transactions failed!");
+          setMainLoader(false);
+        });
+    }else {
+      toast("Transactions cancelled by user!");
+      setMainLoader(false);
+    }
   };
 
   return (
@@ -183,17 +205,22 @@ function Royalties() {
                 {tab === 0 && (
                   <button
                     type="button"
-                    disabled={pending?.length===0}
+                    disabled={pending?.length === 0}
                     onClick={() => getConfirmation()}
-                    className={"btn shadow-none btn-common m-0 px-3 p-2 "+ (pending?.length===0?"cursor-not-allowed":"cursor-pointer")}
+                    className={
+                      "btn shadow-none btn-common-pur btn-common m-0 px-3 p-2 " +
+                      (pending?.length === 0
+                        ? "cursor-not-allowed"
+                        : "cursor-pointer")
+                    }
                   >
                     Pay All
                   </button>
                 )}
               </div>
             </div>
-            <div class="table-responsive p">
-              <table class="table ">
+            <div className="table-responsive p">
+              <table className="table ">
                 <thead>
                   <tr>
                     <th>
@@ -308,6 +335,16 @@ function Royalties() {
             </div>
           </div>
         </section>
+      </div>
+      {/* Add Category Modal */}
+      <div className="main-modal-one">
+        <div
+          className="modal fade"
+          id="exampleModal34"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        ></div>
       </div>
     </>
   );

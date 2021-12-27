@@ -116,7 +116,7 @@ function Dashboard() {
                           </div>
                         </div>
                         {tab === "bid" && (
-                          <div class="table-responsive">
+                          <div className="table-responsive">
                             <table className="table">
                               <tbody>
                                 <Bid />
@@ -125,7 +125,7 @@ function Dashboard() {
                           </div>
                         )}
                         {tab === "history" && (
-                          <div class="table-responsive">
+                          <div className="table-responsive">
                             <table className="">
                               <tbody>
                                 <History />

@@ -821,44 +821,44 @@ const Profiles = () => {
                                                     <div className="right-side-card-filter">
                                                         <h4>Filters</h4>
 
-                                                        <div class="form-check new-poad">
-                                                            <label class="checkbox">
+                                                        <div className="form-check new-poad">
+                                                            <label className="checkbox">
                                                                 <input type="checkbox" />
                                                                 <span>Sales</span>
                                                             </label>
                                                         </div>
-                                                        <div class="form-check new-poad">
-                                                            <label class="checkbox">
+                                                        <div className="form-check new-poad">
+                                                            <label className="checkbox">
                                                                 <input type="checkbox" />
                                                                 <span>Listings</span>
                                                             </label>
                                                         </div>
-                                                        <div class="form-check new-poad">
-                                                            <label class="checkbox">
+                                                        <div className="form-check new-poad">
+                                                            <label className="checkbox">
                                                                 <input type="checkbox" />
                                                                 <span>Bids</span>
                                                             </label>
                                                         </div>
-                                                        <div class="form-check new-poad">
-                                                            <label class="checkbox">
+                                                        <div className="form-check new-poad">
+                                                            <label className="checkbox">
                                                                 <input type="checkbox" />
                                                                 <span>Burns</span>
                                                             </label>
                                                         </div>
-                                                        <div class="form-check new-poad">
-                                                            <label class="checkbox">
+                                                        <div className="form-check new-poad">
+                                                            <label className="checkbox">
                                                                 <input type="checkbox" />
                                                                 <span>Likes</span>
                                                             </label>
                                                         </div>
-                                                        <div class="form-check new-poad">
-                                                            <label class="checkbox">
+                                                        <div className="form-check new-poad">
+                                                            <label className="checkbox">
                                                                 <input type="checkbox" />
                                                                 <span>Purchase</span>
                                                             </label>
                                                         </div>
-                                                        <div class="form-check new-poad">
-                                                            <label class="checkbox">
+                                                        <div className="form-check new-poad">
+                                                            <label className="checkbox">
                                                                 <input type="checkbox" />
                                                                 <span>Transfers</span>
                                                             </label>
@@ -1098,15 +1098,15 @@ const Profiles = () => {
                                         <div className="tab-pane fade" id="pills-offer" role="tabpanel" aria-labelledby="pills-offer-tab">
                                             <div className="main-table-bid">
                                                 <div className="main-tab-offer d-flex justify-content-between">
-                                                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                                                        <li class="nav-item">
-                                                            <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Bid Offers</a>
+                                                    <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                                        <li className="nav-item">
+                                                            <a className="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Bid Offers</a>
                                                         </li>
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Swap Offers</a>
+                                                        <li className="nav-item">
+                                                            <a className="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Swap Offers</a>
                                                         </li>
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Rent Offers</a>
+                                                        <li className="nav-item">
+                                                            <a className="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Rent Offers</a>
                                                         </li>
                                                     </ul>
                                                     <div className="button-sort">
@@ -1114,10 +1114,10 @@ const Profiles = () => {
                                                     </div>
                                                 </div>
 
-                                                <div class="tab-content bidOfferLight" id="pills-tabContent">
-                                                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                                                        <div class="table-responsive">
-                                                            <table class="table">
+                                                <div className="tab-content bidOfferLight" id="pills-tabContent">
+                                                    <div className="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                                                        <div className="table-responsive">
+                                                            <table className="table">
                                                                 <thead>
                                                                     <tr>
                                                                         <th scope="col">Items</th>
@@ -1271,9 +1271,9 @@ const Profiles = () => {
                                                         </div>
 
                                                     </div>
-                                                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-                                                        <div class="table-responsive">
-                                                            <table class="table">
+                                                    <div className="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                                                        <div className="table-responsive">
+                                                            <table className="table">
                                                                 <thead>
                                                                     <tr>
                                                                         <th scope="col">Items</th>
@@ -1433,9 +1433,9 @@ const Profiles = () => {
                                                         </div>
 
                                                     </div>
-                                                    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-                                                        <div class="table-responsive">
-                                                            <table class="table">
+                                                    <div className="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                                                        <div className="table-responsive">
+                                                            <table className="table">
                                                                 <thead>
                                                                     <tr>
                                                                         <th scope="col">Items</th>
@@ -1649,17 +1649,17 @@ const Profiles = () => {
                                                                                         </div>
                                                                                         <div className="modal-body">
                                                                                             <div className="text-left passwordsss">
-                                                                                                <div class="">
+                                                                                                <div className="">
                                                                                                     <label className="text-left" for="exampleInputPassword1">Current Password</label>
-                                                                                                    <input type="password" class="form-control pass" id="exampleInputPassword1" />
+                                                                                                    <input type="password" className="form-control pass" id="exampleInputPassword1" />
                                                                                                 </div>
-                                                                                                <div class="">
+                                                                                                <div className="">
                                                                                                     <label for="exampleInputPassword1">New Password</label>
-                                                                                                    <input type="password" class="form-control pass" id="exampleInputPassword1" />
+                                                                                                    <input type="password" className="form-control pass" id="exampleInputPassword1" />
                                                                                                 </div>
-                                                                                                <div class="">
+                                                                                                <div className="">
                                                                                                     <label for="exampleInputPassword1">Confirm Password</label>
-                                                                                                    <input type="password" class="form-control pass" id="exampleInputPassword1" />
+                                                                                                    <input type="password" className="form-control pass" id="exampleInputPassword1" />
                                                                                                 </div>
                                                                                                 <div className="buttons-modal-pg">
                                                                                                     {/* <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button> */}

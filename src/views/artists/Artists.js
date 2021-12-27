@@ -27,7 +27,7 @@ function Artists() {
                 <div className="searchingg">
                   <input
                     type="search"
-                    class="form-control"
+                    className="form-control"
                     id="datatable-search-input"
                     placeholder="Search Admin"
                   />
@@ -40,9 +40,9 @@ function Artists() {
               </div>
               <div className="col-sm-3">
                 <div className="dropdownnn w-100">
-                  <div class="dropdown button-drop w-100">
+                  <div className="dropdown button-drop w-100">
                     <button
-                      class="main-button text-left  w-100"
+                      className="main-button text-left  w-100"
                       type="button"
                       id="dropdownMenuButton"
                       data-toggle="dropdown"
@@ -57,16 +57,16 @@ function Artists() {
                       />
                     </button>
                     <div
-                      class="dropdown-menu"
+                      className="dropdown-menu"
                       aria-labelledby="dropdownMenuButton"
                     >
-                      <a class="dropdown-item" href="#">
+                      <a className="dropdown-item" href="#">
                         Another action
                       </a>
-                      <a class="dropdown-item" href="#">
+                      <a className="dropdown-item" href="#">
                         Another action
                       </a>
-                      <a class="dropdown-item" href="#">
+                      <a className="dropdown-item" href="#">
                         Another action
                       </a>
                     </div>
@@ -75,9 +75,9 @@ function Artists() {
               </div>
               <div className="col-sm-2 p-0">
                 <div className="dropdownnn w-100">
-                  <div class="dropdown button-drop w-100">
+                  <div className="dropdown button-drop w-100">
                     <button
-                      class="main-button d-flex justify-content-center align-items-center w-100"
+                      className="main-button d-flex justify-content-center align-items-center w-100"
                       type="button"
                       id="dropdownMenuButton"
                       data-toggle="dropdown"
@@ -93,16 +93,16 @@ function Artists() {
                       Filter{" "}
                     </button>
                     <div
-                      class="dropdown-menu"
+                      className="dropdown-menu"
                       aria-labelledby="dropdownMenuButton"
                     >
-                      <a class="dropdown-item" href="#">
+                      <a className="dropdown-item" href="#">
                         Another action
                       </a>
-                      <a class="dropdown-item" href="#">
+                      <a className="dropdown-item" href="#">
                         Another action
                       </a>
-                      <a class="dropdown-item" href="#">
+                      <a className="dropdown-item" href="#">
                         Another action
                       </a>
                     </div>
@@ -112,8 +112,8 @@ function Artists() {
             </div>
           </div>
           <div className="container-fluid pt-4">
-            <div class="table-responsive">
-              <table class="table ">
+            <div className="table-responsive">
+              <table className="table ">
                 <thead>
                   <tr>
                     <th>
@@ -206,10 +206,10 @@ function Artists() {
                     <td className="grey">3.7K</td>
                     <td className="grey">1.5K</td>
                     <td className="grey">
-                      <div class="switch">
-                        <label class="switch">
+                      <div className="switch">
+                        <label className="switch">
                           <input type="checkbox" name="forSale" />
-                          <span class="slider round"></span>
+                          <span className="slider round"></span>
                         </label>
                       </div>
                     </td>

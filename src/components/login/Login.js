@@ -4,7 +4,7 @@ import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useHistory } from "react-router-dom";
-import Environment from "../../utils/environment";
+import Environment from "../../utils/Environment";
 import "./login.scss";
 const Login = () => {
   const [emailError, setEmailError] = useState({});
@@ -72,9 +72,8 @@ const Login = () => {
 
       axios(config)
         .then(function (response) {
-          console.log("response", response.data);
           localStorage.setItem("openCanvasToken", response.data.token);
-          history.push("/admin/dashboard");
+          history.push("/admin/Royalties");
           setLoader(false);
         })
         .catch(function (error) {

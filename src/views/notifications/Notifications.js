@@ -16,8 +16,8 @@ function Notificationss() {
             <div className="content">
                 <section className="videos notifications card">
                     <div className="container-fluid">
-                        <div class="table-responsive">
-                            <table class="table ">
+                        <div className="table-responsive">
+                            <table className="table ">
                                 <thead>
                                     <tr>
                                         <th>Message</th>

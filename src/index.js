@@ -20,22 +20,26 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
+import "./app.scss"
+import "bootstrap/dist/css/bootstrap.css";
 import "assets/scss/paper-dashboard.scss?v=1.3.0";
 import "assets/demo/demo.css";
 import "perfect-scrollbar/css/perfect-scrollbar.css";
-import AdminLayout from "layouts/Admin.js";
-import Login from "components/login/Login";
-import "./app.scss"
-
+import App from './App';
+import { Provider } from 'react-redux';
+import store from './redux/store/index';
+import { Web3ReactProvider } from '@web3-react/core'
+import { getLibrary } from './utils/web3React'
 
 
 ReactDOM.render(
-  <BrowserRouter>
-    <Switch>
-    <Route  path="/adminlogin" render={(props) => <Login {...props} />} />
-      <Route  path="/admin" render={(props) => <AdminLayout {...props} />} />
-      <Redirect to="/adminlogin" />
-    </Switch>
-  </BrowserRouter>,
-  document.getElementById("root")
+  <Provider store={store}>
+    <Web3ReactProvider getLibrary={getLibrary}>
+      <App />
+    </Web3ReactProvider>
+  </Provider>,
+
+  document.getElementById('root')
 );
+
+

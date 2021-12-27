@@ -18,20 +18,20 @@ function Users() {
                         <div className="row">
                             <div className="col-sm-7 p-0">
                                 <div className="searchingg">
-                                    <input type="search" class="form-control" id="datatable-search-input" placeholder="Search Admin" />
+                                    <input type="search" className="form-control" id="datatable-search-input" placeholder="Search Admin" />
                                     <img src={`${images['aaaa.png']['default']}`} alt="" className="img-fluid upper-nnn" />
                                 </div>
                             </div>
                             <div className="col-sm-3">
                                 <div className="dropdownnn w-100">
-                                    <div class="dropdown button-drop w-100">
-                                        <button class="main-button text-left  w-100" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <div className="dropdown button-drop w-100">
+                                        <button className="main-button text-left  w-100" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             Sort By <img src={`${images['Vector2.png']['default']}`} alt="" className="float-right" />
                                         </button>
-                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item" href="#">Another action</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
+                                        <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a className="dropdown-item" href="#">Another action</a>
+                                            <a className="dropdown-item" href="#">Another action</a>
+                                            <a className="dropdown-item" href="#">Another action</a>
                                         </div>
                                     </div>
                                 </div>
@@ -50,8 +50,8 @@ function Users() {
                     </div>
                     <div className="row">
                         <div className="col-sm-12 p-0">
-                            <div class="table-responsive">
-                                <table class="table ">
+                            <div className="table-responsive">
+                                <table className="table ">
                                     <thead>
                                         <tr>
                                             <th className='grey'>Joe Gray</th>

@@ -54,9 +54,9 @@ function Artistsdetail() {
                       </div>
 
                       <div className="col-lg-2 col-md-6">
-                        <div class="switch">
-                          <label class="switch">
-                            <input type="checkbox" name="forSale" /><span class="slider round"></span></label>
+                        <div className="switch">
+                          <label className="switch">
+                            <input type="checkbox" name="forSale" /><span className="slider round"></span></label>
                         </div>
 
 
@@ -137,8 +137,8 @@ function Artistsdetail() {
 
             </div>
           </div>
-          {/* <div class="table-responsive">
-                <table class="table ">
+          {/* <div className="table-responsive">
+                <table className="table ">
                   <thead>
                     <tr>
                       <th> Users Name <img src={arrowdown} className="pl-1" alt="" /></th>

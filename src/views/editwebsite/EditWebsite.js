@@ -82,14 +82,14 @@ function EditWebsites() {
                                         </div>
                                         <div className="col-sm-5">
                                             <div className="d-flex justify-content-center align-items-center ">
-                                                <div class="dropdown button-drop w-100">
-                                                    <button class="main-button" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <div className="dropdown button-drop w-100">
+                                                    <button className="main-button" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                         FUDGE.COM/INDEX.HTML <img src={`${images['Vector2.png']['default']}`} alt="" />
                                                     </button>
-                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                        <a class="dropdown-item" href="#">Another action</a>
-                                                        <a class="dropdown-item" href="#">Another action</a>
-                                                        <a class="dropdown-item" href="#">Another action</a>
+                                                    <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a className="dropdown-item" href="#">Another action</a>
+                                                        <a className="dropdown-item" href="#">Another action</a>
+                                                        <a className="dropdown-item" href="#">Another action</a>
                                                     </div>
                                                 </div>
                                                 <img src={`${images['ant-design_close-circle-outlined.png']['default']}`} className="pl-3" alt="" />
@@ -124,7 +124,7 @@ function EditWebsites() {
                                     </div>
                                     <div className="row">
                                         <div className="col-sm-12">
-                                            <div class="form-group rightside-for-group">
+                                            <div className="form-group rightside-for-group">
                                                 <div className="dashed-border-new">
                                                     <div className="main-image-div">
                                                         <img src={`${images['addvid2.png']}`} alt="" />
@@ -148,11 +148,11 @@ function EditWebsites() {
                                     <div className="row">
                                         <div className="col-sm-6">
                                             <div className="main-new-in">
-                                                {/* <div class="form-group">
+                                                {/* <div className="form-group">
                                                     <label for="example">Heading 1</label>
-                                                    <input type="text" class="form-control input-design" id="example" aria-describedby="text" placeholder="Primary" />
+                                                    <input type="text" className="form-control input-design" id="example" aria-describedby="text" placeholder="Primary" />
                                                 </div> */}
-                                                <div class="form-group">
+                                                <div className="form-group">
                                                                         <label For="name">Heading 1</label>
                                                                         <TextValidator
                                                                             fullWidth
@@ -170,11 +170,11 @@ function EditWebsites() {
                                                                     </div>
                                             </div>
                                             <div className="main-new-in">
-                                                {/* <div class="form-group">
+                                                {/* <div className="form-group">
                                                     <label for="example">Heading 2</label>
-                                                    <input type="text" class="form-control input-design" id="example" aria-describedby="text" placeholder="The #1 Community Based NFT Platform" />
+                                                    <input type="text" className="form-control input-design" id="example" aria-describedby="text" placeholder="The #1 Community Based NFT Platform" />
                                                 </div> */}
-                                                <div class="form-group">
+                                                <div className="form-group">
                                                                         <label For="name">Heading 2</label>
                                                                         <TextValidator
                                                                             fullWidth
@@ -192,15 +192,15 @@ function EditWebsites() {
                                                                     </div>
                                             </div>
                                             <div className="main-new-ins">
-                                                <div class="form-group">
+                                                <div className="form-group">
                                                     <label className="padd-top" for="example">Body Text</label>
-                                                    <textarea class="form-control input-designss" id="exampleFormControlTextarea1" placeholder="Create, Sell, or Buy your NFTs with our biggest NFT
+                                                    <textarea className="form-control input-designss" id="exampleFormControlTextarea1" placeholder="Create, Sell, or Buy your NFTs with our biggest NFT
                                                     Community" rows="5"></textarea>
                                                 </div>
                                             </div>
                                         </div>
                                         <div className="col-sm-6">
-                                            <div class="form-group rightside-for-group">
+                                            <div className="form-group rightside-for-group">
                                                 <label for="exampleInputsymbol">Header Image</label>
                                                 <div className="dashed-border-new">
                                                     <div className="main-image-div">
@@ -278,11 +278,11 @@ function EditWebsites() {
                                     <div className="row">
                                         <div className="col-sm-6">
                                             <div className="main-new-in ">
-                                                {/* <div class="form-group">
+                                                {/* <div className="form-group">
                                                     <label for="example">Heading</label>
-                                                    <input type="text" class="form-control input-design" id="example" aria-describedby="text" placeholder="GET YOUR VERY FIRST NFT!" />
+                                                    <input type="text" className="form-control input-design" id="example" aria-describedby="text" placeholder="GET YOUR VERY FIRST NFT!" />
                                                 </div> */}
-                                                <div class="form-group">
+                                                <div className="form-group">
                                                                         <label For="name">Heading</label>
                                                                         <TextValidator
                                                                             fullWidth
@@ -300,14 +300,14 @@ function EditWebsites() {
                                                                     </div>
                                             </div>
                                             <div className="main-new-ins">
-                                                <div class="form-group">
+                                                <div className="form-group">
                                                     <label className="padd-top" for="example">Body Text</label>
-                                                    <textarea class="form-control input-designss" id="exampleFormControlTextarea1" placeholder="Here's how it's work" rows="5"></textarea>
+                                                    <textarea className="form-control input-designss" id="exampleFormControlTextarea1" placeholder="Here's how it's work" rows="5"></textarea>
                                                 </div>
                                             </div>
                                         </div>
                                         <div className="col-sm-6">
-                                            <div class="form-group rightside-for-group">
+                                            <div className="form-group rightside-for-group">
                                                 <label for="exampleInputsymbol">Video</label>
                                                 <div className="dashed-border-new">
                                                     <div className="main-image-div">
@@ -343,11 +343,11 @@ function EditWebsites() {
                                     <div className="row">
                                         <div className="col-sm-6">
                                             <div className="main-new-in ">
-                                                {/* <div class="form-group">
+                                                {/* <div className="form-group">
                                                     <label for="example">Heading</label>
-                                                    <input type="text" class="form-control input-design" id="example" aria-describedby="text" placeholder="Setup your Wallet" />
+                                                    <input type="text" className="form-control input-design" id="example" aria-describedby="text" placeholder="Setup your Wallet" />
                                                 </div> */}
-                                                <div class="form-group">
+                                                <div className="form-group">
                                                                         <label For="name">Heading</label>
                                                                         <TextValidator
                                                                             fullWidth
@@ -365,14 +365,14 @@ function EditWebsites() {
                                                                     </div>
                                             </div>
                                             <div className="main-new-ins">
-                                                <div class="form-group">
+                                                <div className="form-group">
                                                     <label className="padd-top" for="example">Body Text</label>
-                                                    <textarea class="form-control input-designss" id="exampleFormControlTextarea1" placeholder="Once you’ve set up your wallet of choice, connect it to OpenSea by clicking the wallet icon in the top right corner. Learn about the wallets we support." rows="5"></textarea>
+                                                    <textarea className="form-control input-designss" id="exampleFormControlTextarea1" placeholder="Once you’ve set up your wallet of choice, connect it to OpenSea by clicking the wallet icon in the top right corner. Learn about the wallets we support." rows="5"></textarea>
                                                 </div>
                                             </div>
                                         </div>
                                         <div className="col-sm-6">
-                                            <div class="form-group rightside-for-group">
+                                            <div className="form-group rightside-for-group">
                                                 <label for="exampleInputsymbol">Icon</label>
                                                 <div className="dashed-border-new">
                                                     <div className="main-image-div">
@@ -401,11 +401,11 @@ function EditWebsites() {
                                     <div className="row">
                                         <div className="col-sm-6">
                                             <div className="main-new-in ">
-                                                {/* <div class="form-group">
+                                                {/* <div className="form-group">
                                                     <label for="example">Heading</label>
-                                                    <input type="text" class="form-control input-design" id="example" aria-describedby="text" placeholder="Add your NFT’s" />
+                                                    <input type="text" className="form-control input-design" id="example" aria-describedby="text" placeholder="Add your NFT’s" />
                                                 </div> */}
-                                                <div class="form-group">
+                                                <div className="form-group">
                                                                         <label For="name">Heading</label>
                                                                         <TextValidator
                                                                             fullWidth
@@ -423,14 +423,14 @@ function EditWebsites() {
                                                                     </div>
                                             </div>
                                             <div className="main-new-ins">
-                                                <div class="form-group">
+                                                <div className="form-group">
                                                     <label className="padd-top" for="example">Body Text</label>
-                                                    <textarea class="form-control input-designss" id="exampleFormControlTextarea1" placeholder="Upload your work (image, video, audio, or 3D art), add a title and description, and customize your NFTs with properties, stats, and unlockable content." rows="5"></textarea>
+                                                    <textarea className="form-control input-designss" id="exampleFormControlTextarea1" placeholder="Upload your work (image, video, audio, or 3D art), add a title and description, and customize your NFTs with properties, stats, and unlockable content." rows="5"></textarea>
                                                 </div>
                                             </div>
                                         </div>
                                         <div className="col-sm-6">
-                                            <div class="form-group rightside-for-group">
+                                            <div className="form-group rightside-for-group">
                                                 <label for="exampleInputsymbol">Icon</label>
                                                 <div className="dashed-border-new">
                                                     <div className="main-image-div">
@@ -460,11 +460,11 @@ function EditWebsites() {
                                     <div className="row">
                                         <div className="col-sm-6">
                                             <div className="main-new-in ">
-                                                {/* <div class="form-group">
+                                                {/* <div className="form-group">
                                                     <label for="example">Heading</label>
-                                                    <input type="text" class="form-control input-design" id="example" aria-describedby="text" placeholder="Setup your Wallet" />
+                                                    <input type="text" className="form-control input-design" id="example" aria-describedby="text" placeholder="Setup your Wallet" />
                                                 </div> */}
-                                                <div class="form-group">
+                                                <div className="form-group">
                                                                         <label For="name">Heading</label>
                                                                         <TextValidator
                                                                             fullWidth
@@ -482,14 +482,14 @@ function EditWebsites() {
                                                                     </div>
                                             </div>
                                             <div className="main-new-ins">
-                                                <div class="form-group">
+                                                <div className="form-group">
                                                     <label className="padd-top" for="example">Body Text</label>
-                                                    <textarea class="form-control input-designss" id="exampleFormControlTextarea1" placeholder="Choose between auctions, fixed-price listings, and declining-price listings. You choose how you want to sell your NFTs, and we help you sell them!" rows="5"></textarea>
+                                                    <textarea className="form-control input-designss" id="exampleFormControlTextarea1" placeholder="Choose between auctions, fixed-price listings, and declining-price listings. You choose how you want to sell your NFTs, and we help you sell them!" rows="5"></textarea>
                                                 </div>
                                             </div>
                                         </div>
                                         <div className="col-sm-6">
-                                            <div class="form-group rightside-for-group">
+                                            <div className="form-group rightside-for-group">
                                                 <label for="exampleInputsymbol">Icon</label>
                                                 <div className="dashed-border-new">
                                                     <div className="main-image-div">
@@ -525,11 +525,11 @@ function EditWebsites() {
 
                                         <div className="col-sm-6">
                                             <div className="main-new-in">
-                                                {/* <div class="form-group">
+                                                {/* <div className="form-group">
                                                     <label for="example">Artist Name</label>
-                                                    <input type="text" class="form-control input-design" id="example" aria-describedby="text" placeholder="Adijavar Maccaroni" />
+                                                    <input type="text" className="form-control input-design" id="example" aria-describedby="text" placeholder="Adijavar Maccaroni" />
                                                 </div> */}
-                                                <div class="form-group">
+                                                <div className="form-group">
                                                                         <label For="name">Artist Name</label>
                                                                         <TextValidator
                                                                             fullWidth
@@ -547,17 +547,17 @@ function EditWebsites() {
                                                                     </div>
                                             </div>
                                             <div className="main-new-ins">
-                                                <div class="form-group">
+                                                <div className="form-group">
                                                     <label className="padd-top" for="example">Artist Discription</label>
-                                                    <textarea class="form-control input-designss" id="exampleFormControlTextarea1" placeholder="I believe that love is difficult, but worth trying" rows="5"></textarea>
+                                                    <textarea className="form-control input-designss" id="exampleFormControlTextarea1" placeholder="I believe that love is difficult, but worth trying" rows="5"></textarea>
                                                 </div>
                                             </div>
                                             <div className="main-new-in">
-                                                {/* <div class="form-group">
+                                                {/* <div className="form-group">
                                                     <label for="example">Facebook</label>
-                                                    <input type="text" class="form-control input-design" id="example" aria-describedby="text" placeholder="www.facebook.com/Adijavar Maccaroni" />
+                                                    <input type="text" className="form-control input-design" id="example" aria-describedby="text" placeholder="www.facebook.com/Adijavar Maccaroni" />
                                                 </div> */}
-                                                <div class="form-group">
+                                                <div className="form-group">
                                                                         <label For="name">AFacebook</label>
                                                                         <TextValidator
                                                                             fullWidth
@@ -575,11 +575,11 @@ function EditWebsites() {
                                                                     </div>
                                             </div>
                                             <div className="main-new-in">
-                                                {/* <div class="form-group">
+                                                {/* <div className="form-group">
                                                     <label for="example">Twitter</label>
-                                                    <input type="text" class="form-control input-design" id="example" aria-describedby="text" placeholder="www.twitter.com/Adijavar Maccaroni" />
+                                                    <input type="text" className="form-control input-design" id="example" aria-describedby="text" placeholder="www.twitter.com/Adijavar Maccaroni" />
                                                 </div> */}
-                                                <div class="form-group">
+                                                <div className="form-group">
                                                                         <label For="name">Twitter</label>
                                                                         <TextValidator
                                                                             fullWidth
@@ -597,11 +597,11 @@ function EditWebsites() {
                                                                     </div>
                                             </div>
                                             <div className="main-new-in">
-                                                {/* <div class="form-group">
+                                                {/* <div className="form-group">
                                                     <label for="example">Instagram</label>
-                                                    <input type="text" class="form-control input-design" id="example" aria-describedby="text" placeholder="www.Instagram.com/Adijavar Maccaroni" />
+                                                    <input type="text" className="form-control input-design" id="example" aria-describedby="text" placeholder="www.Instagram.com/Adijavar Maccaroni" />
                                                 </div> */}
-                                                <div class="form-group">
+                                                <div className="form-group">
                                                                         <label For="name">Instagram</label>
                                                                         <TextValidator
                                                                             fullWidth
@@ -619,11 +619,11 @@ function EditWebsites() {
                                                                     </div>
                                             </div>
                                             <div className="main-new-in">
-                                                {/* <div class="form-group">
+                                                {/* <div className="form-group">
                                                     <label for="example">Website</label>
-                                                    <input type="text" class="form-control input-design" id="example" aria-describedby="text" placeholder="www.AdijavarMaccaroni.com" />
+                                                    <input type="text" className="form-control input-design" id="example" aria-describedby="text" placeholder="www.AdijavarMaccaroni.com" />
                                                 </div> */}
-                                                <div class="form-group">
+                                                <div className="form-group">
                                                                         <label For="name">Website</label>
                                                                         <TextValidator
                                                                             fullWidth
@@ -644,7 +644,7 @@ function EditWebsites() {
 
                                         </div>
                                         <div className="col-sm-6">
-                                            <div class="form-group rightside-for-group">
+                                            <div className="form-group rightside-for-group">
                                                 <label for="exampleInputsymbol">Header Image</label>
                                                 <div className="dashed-border-new">
                                                     <div className="main-image-div">
@@ -679,7 +679,7 @@ function EditWebsites() {
                                     </div>
                                     <div className="row">
                                         <div className="col-sm-12">
-                                            <div class="form-group rightside-for-group">
+                                            <div className="form-group rightside-for-group">
                                                 <div className="dashed-border-new">
                                                     <div className="main-image-div">
                                                         <img src={`${images['addvid2.png']}`} alt="" />
@@ -714,11 +714,11 @@ function EditWebsites() {
 
                                         <div className="col-sm-6">
                                             <div className="main-new-in">
-                                                {/* <div class="form-group">
+                                                {/* <div className="form-group">
                                                     <label for="example">Heading</label>
-                                                    <input type="text" class="form-control input-design" id="example" aria-describedby="text" placeholder="Join The Fudge Community" />
+                                                    <input type="text" className="form-control input-design" id="example" aria-describedby="text" placeholder="Join The Fudge Community" />
                                                 </div> */}
-                                                <div class="form-group">
+                                                <div className="form-group">
                                                                         <label For="name">Heading</label>
                                                                         <TextValidator
                                                                             fullWidth
@@ -736,17 +736,17 @@ function EditWebsites() {
                                                                     </div>
                                             </div>
                                             <div className="main-new-ins">
-                                                <div class="form-group">
+                                                <div className="form-group">
                                                     <label className="padd-top" for="example">Body Text</label>
-                                                    <textarea class="form-control input-designss" id="exampleFormControlTextarea1" placeholder="Join our mailing list to stay in the loop with our newest feature releases, NFT drops, and tips and tricks for navigating Fudge." rows="5"></textarea>
+                                                    <textarea className="form-control input-designss" id="exampleFormControlTextarea1" placeholder="Join our mailing list to stay in the loop with our newest feature releases, NFT drops, and tips and tricks for navigating Fudge." rows="5"></textarea>
                                                 </div>
                                             </div>
                                             <div className="main-new-in">
-                                                <div class="form-group">
+                                                <div className="form-group">
                                                     <label for="example">Facebook</label>
-                                                    <input type="text" class="form-control input-design" id="example" aria-describedby="text" placeholder="www.facebook.com/Adijavar Maccaroni" />
+                                                    <input type="text" className="form-control input-design" id="example" aria-describedby="text" placeholder="www.facebook.com/Adijavar Maccaroni" />
                                                 </div>
-                                                <div class="form-group">
+                                                <div className="form-group">
                                                                         <label For="name">Facebook</label>
                                                                         <TextValidator
                                                                             fullWidth
@@ -764,11 +764,11 @@ function EditWebsites() {
                                                                     </div>
                                             </div>
                                             <div className="main-new-in">
-                                                <div class="form-group">
+                                                <div className="form-group">
                                                     <label for="example">Twitter</label>
-                                                    <input type="text" class="form-control input-design" id="example" aria-describedby="text" placeholder="www.twitter.com/Adijavar Maccaroni" />
+                                                    <input type="text" className="form-control input-design" id="example" aria-describedby="text" placeholder="www.twitter.com/Adijavar Maccaroni" />
                                                 </div>
-                                                <div class="form-group">
+                                                <div className="form-group">
                                                                         <label For="name">Twitter</label>
                                                                         <TextValidator
                                                                             fullWidth
@@ -786,11 +786,11 @@ function EditWebsites() {
                                                                     </div>
                                             </div>
                                             <div className="main-new-in">
-                                                {/* <div class="form-group">
+                                                {/* <div className="form-group">
                                                     <label for="example">Instagram</label>
-                                                    <input type="text" class="form-control input-design" id="example" aria-describedby="text" placeholder="www.Instagram.com/Adijavar Maccaroni" />
+                                                    <input type="text" className="form-control input-design" id="example" aria-describedby="text" placeholder="www.Instagram.com/Adijavar Maccaroni" />
                                                 </div> */}
-                                                <div class="form-group">
+                                                <div className="form-group">
                                                                         <label For="name">Instagram</label>
                                                                         <TextValidator
                                                                             fullWidth
@@ -808,11 +808,11 @@ function EditWebsites() {
                                                                     </div>
                                             </div>
                                             <div className="main-new-in">
-                                                {/* <div class="form-group">
+                                                {/* <div className="form-group">
                                                     <label for="example">Website</label>
-                                                    <input type="text" class="form-control input-design" id="example" aria-describedby="text" placeholder="www.AdijavarMaccaroni.com" />
+                                                    <input type="text" className="form-control input-design" id="example" aria-describedby="text" placeholder="www.AdijavarMaccaroni.com" />
                                                 </div> */}
-                                                <div class="form-group">
+                                                <div className="form-group">
                                                                         <label For="name">Website</label>
                                                                         <TextValidator
                                                                             fullWidth
@@ -833,7 +833,7 @@ function EditWebsites() {
 
                                         </div>
                                         <div className="col-sm-6">
-                                            <div class="form-group rightside-for-group">
+                                            <div className="form-group rightside-for-group">
                                                 <label for="exampleInputsymbol">Header Image</label>
                                                 <div className="dashed-border-new">
                                                     <div className="main-image-div">
@@ -877,14 +877,14 @@ function EditWebsites() {
                                                     </div>
                                                     <div className="col-xl-8 col-12">
                                                         <div className="d-flex justify-content-center align-items-center ">
-                                                            <div class="dropdown button-drop w-100">
-                                                                <button class="main-button" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            <div className="dropdown button-drop w-100">
+                                                                <button className="main-button" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                                     FUDGE.COM <img src={`${images['Vector2.png']['default']}`} alt="" />
                                                                 </button>
-                                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                                    <a class="dropdown-item" href="#">Another action</a>
-                                                                    <a class="dropdown-item" href="#">Another action</a>
-                                                                    <a class="dropdown-item" href="#">Another action</a>
+                                                                <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                                    <a className="dropdown-item" href="#">Another action</a>
+                                                                    <a className="dropdown-item" href="#">Another action</a>
+                                                                    <a className="dropdown-item" href="#">Another action</a>
                                                                 </div>
                                                             </div>
                                                             <img src={`${images['ant-design_close-circle-outlined.png']['default']}`} className="pl-3" alt="" />
@@ -900,11 +900,11 @@ function EditWebsites() {
                                                 </div>
                                             </div>
                                             <div className="main-new-in">
-                                                {/* <div class="form-group">
+                                                {/* <div className="form-group">
                                                     <label for="example">Facebook</label>
-                                                    <input type="text" class="form-control input-design" id="example" aria-describedby="text" placeholder="www.facebook.com/Adijavar Maccaroni" />
+                                                    <input type="text" className="form-control input-design" id="example" aria-describedby="text" placeholder="www.facebook.com/Adijavar Maccaroni" />
                                                 </div> */}
-                                                <div class="form-group">
+                                                <div className="form-group">
                                                                         <label For="name">Facebook</label>
                                                                         <TextValidator
                                                                             fullWidth
@@ -922,11 +922,11 @@ function EditWebsites() {
                                                                     </div>
                                             </div>
                                             <div className="main-new-in">
-                                                {/* <div class="form-group">
+                                                {/* <div className="form-group">
                                                     <label for="example">Twitter</label>
-                                                    <input type="text" class="form-control input-design" id="example" aria-describedby="text" placeholder="www.twitter.com/Adijavar Maccaroni" />
+                                                    <input type="text" className="form-control input-design" id="example" aria-describedby="text" placeholder="www.twitter.com/Adijavar Maccaroni" />
                                                 </div> */}
-                                                <div class="form-group">
+                                                <div className="form-group">
                                                                         <label For="name">Twitter</label>
                                                                         <TextValidator
                                                                             fullWidth
@@ -944,11 +944,11 @@ function EditWebsites() {
                                                                     </div>
                                             </div>
                                             <div className="main-new-in">
-                                                {/* <div class="form-group">
+                                                {/* <div className="form-group">
                                                     <label for="example">Instagram</label>
-                                                    <input type="text" class="form-control input-design" id="example" aria-describedby="text" placeholder="www.Instagram.com/Adijavar Maccaroni" />
+                                                    <input type="text" className="form-control input-design" id="example" aria-describedby="text" placeholder="www.Instagram.com/Adijavar Maccaroni" />
                                                 </div> */}
-                                                <div class="form-group">
+                                                <div className="form-group">
                                                                         <label For="name">Instagram</label>
                                                                         <TextValidator
                                                                             fullWidth
@@ -966,11 +966,11 @@ function EditWebsites() {
                                                                     </div>
                                             </div>
                                             <div className="main-new-in">
-                                                {/* <div class="form-group">
+                                                {/* <div className="form-group">
                                                     <label for="example">Website</label>
-                                                    <input type="text" class="form-control input-design" id="example" aria-describedby="text" placeholder="www.AdijavarMaccaroni.com" />
+                                                    <input type="text" className="form-control input-design" id="example" aria-describedby="text" placeholder="www.AdijavarMaccaroni.com" />
                                                 </div> */}
-                                                <div class="form-group">
+                                                <div className="form-group">
                                                                         <label For="name">Website</label>
                                                                         <TextValidator
                                                                             fullWidth
@@ -989,7 +989,7 @@ function EditWebsites() {
                                             </div>
                                         </div>
                                         <div className="col-sm-6">
-                                            <div class="form-group rightside-for-group">
+                                            <div className="form-group rightside-for-group">
                                                 <label for="exampleInputsymbol">Footer Logo</label>
                                                 <div className="dashed-border-new">
                                                     <div className="main-image-div">

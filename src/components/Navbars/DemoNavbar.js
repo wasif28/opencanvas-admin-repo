@@ -16,11 +16,11 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import user5 from "assets/img/userflow/filterss.png";
-import user4 from "assets/img/userflow/add1.png";
-import user6 from "assets/img/userflow/arrow-down.png";
+import { useWeb3React } from "@web3-react/core";
+import ConnectWallet from "../modals/connectWallet";
+import useAuth from "../../hooks/useAuth";
 
 import {
   Collapse,
@@ -39,10 +39,14 @@ import routes from "routes.js";
 function Header(props) {
   function importAll(r) {
     let images = {};
-    r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
+    r.keys().map((item, index) => {
+      images[item.replace("./", "")] = r(item);
+    });
     return images;
   }
-  const images = importAll(require.context('assets/img/dashboardimg', false, /\.(png|jpe?g|svg)$/));
+  const images = importAll(
+    require.context("assets/img/dashboardimg", false, /\.(png|jpe?g|svg)$/)
+  );
 
   const [isOpen, setIsOpen] = React.useState(false);
   const [brandName, setbrandName] = React.useState();
@@ -50,6 +54,7 @@ function Header(props) {
   const [color, setColor] = React.useState("transparent");
   const sidebarToggle = React.useRef();
   const location = useLocation();
+  const { account } = useWeb3React();
   const toggle = () => {
     if (isOpen) {
       setColor("transparent");
@@ -65,16 +70,16 @@ function Header(props) {
     routes.map((prop, key) => {
       if (window.location.href.indexOf(prop.layout + prop.path) !== -1) {
         // brandname = prop.name;
-        setbrandName(prop.name)
+        setbrandName(prop.name);
         // console.log(brandName)
       }
       return null;
     });
   };
 
-useEffect(() => {
-  getBrand()
-}, )
+  useEffect(() => {
+    getBrand();
+  });
 
   const openSidebar = () => {
     document.documentElement.classList.toggle("nav-open");
@@ -100,6 +105,36 @@ useEffect(() => {
       sidebarToggle.current.classList.toggle("toggled");
     }
   }, [location]);
+
+  const { login, logout } = useAuth();
+
+  const connectMetamask = () => {
+    localStorage.setItem("connectorId", "injected");
+    if (account) {
+      logout();
+    } else {
+      login("injected");
+    }
+  };
+
+  const trustWallet = async () => {
+    localStorage.setItem("connectorId", "walletconnect");
+    if (account) {
+      logout();
+    } else {
+      login("walletconnect");
+    }
+  };
+
+  const connectwallet = () => {
+    if(account){
+      connectMetamask();
+    }else {
+      window.$("#exampleModalLong").modal("show");
+    }
+  };
+
+
   return (
     // add or remove classes depending if we are on full-screen-maps page or not
     <div className="main-div-nav-head">
@@ -114,7 +149,7 @@ useEffect(() => {
           props.location.pathname.indexOf("full-screen-maps") !== -1
             ? "navbar-absolute fixed-top"
             : "navbar-absolute fixed-top " +
-            (color === "transparent" ? "navbar-transparent " : "")
+              (color === "transparent" ? "navbar-transparent " : "")
         }
       >
         <Container fluid className="main-header-top-change">
@@ -139,93 +174,55 @@ useEffect(() => {
             <span className="navbar-toggler-bar navbar-kebab" />
           </NavbarToggler>
           <Collapse isOpen={isOpen} navbar className="justify-content-end">
-            {/* <form>
-              <InputGroup className="no-border">
-                <Input className="form-group" placeholder="Search..." />
-                <InputGroupAddon addonType="append">
-                  <InputGroupText>
-                    <i className="nc-icon nc-zoom-split" />
-                  </InputGroupText>
-                </InputGroupAddon>
-              </InputGroup>
-            </form> */}
-
-            {/* <div className="profile-image">
-              <img src={`${images['image-profile.png']['default']}`} className="back-img" alt="" />
-            </div> */}
-            <button type="button" className="btn-common-pur btn mr-4"> Connect your Wallet</button>
+            <button
+              type="button"
+              onClick={connectwallet}
+              className="btn-common-pur btn mr-4"
+            >
+              { account ? "Disconnect Wallet" : "Connect Wallet" }
+            </button>
             <div className="dropdown drop-seller">
-              <button class="button-seller" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <img src={`${images['image-profile.png']['default']}`} className="back-img" alt="" />
+              <button
+                className="button-seller"
+                type="button"
+                id="dropdownMenuButton"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <img
+                  src={`${images["image-profile.png"]["default"]}`}
+                  className="back-img"
+                  alt=""
+                />
               </button>
-              <div className="dropdown-menu drop-mainn" aria-labelledby="dropdownMenuButton">
-                <Link to={`/admin/editprofile`} className="dropdown-item">Edit Profile</Link>
-                <Link to="user" className="dropdown-item" >Users</Link>
+              <div
+                className="dropdown-menu drop-mainn"
+                aria-labelledby="dropdownMenuButton"
+              >
+                <Link to={`/admin/editprofile`} className="dropdown-item">
+                  Edit Profile
+                </Link>
+                <Link to="user" className="dropdown-item">
+                  Users
+                </Link>
               </div>
             </div>
-            {/* <div className="bootstrap-drown">
-              <div class="dropdown">
-                <button class="button-header-nav" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <img src={user5} className="pad-rihgtt pr-4" alt="" />
-                Filters
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-              </div>
-            </div>
-
-            <div className="bootstrap-drown-two">
-              <div class="dropdown">
-                <button class="button-header-filter" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                
-                Sort by  <img src={user6} className="pad-rihgt pl-4" alt="" />
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-              </div>  
-            </div> */}
           </Collapse>
         </Container>
       </Navbar>
-      {/* Add Category Modal */}
-      <div className="main-modal-one">
-        <div class="modal fade" id="exampleModal34" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog daily-profile-modal">
-            <div class="modal-content daily-profile-modal-inner">
-              <div class="modal-body modal-body-main">
-                <div className="main-outter">
-                  <div className="row main-cardssss">
-                    <div className="col-md-12 col-12">
-                      <div className="flux-b">
-                        <h3>Add Category</h3>
-                      </div>
-                    </div>
-                    <div className="col-12">
-                      <div class="form-group">
-                        <label for="example">Category Name</label>
-                        <input type="text" class="form-control" id="example" aria-describedby="text" placeholder="Enter Category Name" />
-                        {/* {Object.keys(projectNameError).map((key)=>{
-                                                          console.log("key",key);
-                                                         return <p className="inputErrors">{projectNameError[key]}</p>
-                                                          })} */}
-                      </div>
-                    </div>
-                    <div className="col-md-12 col-12">
-                      <div className="button-modal-daily">
-                        <button type="button" className="button-main-daily"  >Add</button>
-                        <button type="button" className="button-main-dailys" data-dismiss="modal" aria-label="Close" >Cancel</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+      {/* Add Wallet Modal */}
+      <div className="row">
+        <div className="col-sm-12">
+          <div
+            className="modal fade"
+            id="exampleModalLong"
+            tabIndex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLongTitle"
+            aria-hidden="true"
+          >
+            <ConnectWallet trustWallet={trustWallet} connectMetamask={connectMetamask} />
           </div>
         </div>
       </div>

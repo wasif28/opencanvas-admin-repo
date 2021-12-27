@@ -15,8 +15,8 @@ function Nft() {
             <div className="content">
                 <section className="users card">
                     <div className="container-fluid">
-                        <div class="table-responsive">
-                            <table class="table ">
+                        <div className="table-responsive">
+                            <table className="table ">
                                 <thead>
                                     <tr>
                                         <th > Item <img src={`${images['arrow-down.png']['default']}`} className="pl-1" alt="" /></th>
@@ -56,11 +56,11 @@ function Nft() {
                                         </td>
                                         <td className='grey'>1.5K</td>
                                         <td className='grey'>
-                                            <div class="switch">
+                                            <div className="switch">
 
-                                                <label class="switch">
+                                                <label className="switch">
                                                     <input type="checkbox" name="forSale" />
-                                                    <span class="slider round"></span>
+                                                    <span className="slider round"></span>
                                                 </label>
                                             </div>
                                         </td>
@@ -94,11 +94,11 @@ function Nft() {
                                         </td>
                                         <td className='grey'>1.5K</td>
                                         <td className='grey'>
-                                            <div class="switch">
+                                            <div className="switch">
 
-                                                <label class="switch">
+                                                <label className="switch">
                                                     <input type="checkbox" name="forSale" />
-                                                    <span class="slider round"></span>
+                                                    <span className="slider round"></span>
                                                 </label>
                                             </div>
                                         </td>
@@ -132,11 +132,11 @@ function Nft() {
                                         </td>
                                         <td className='grey'>1.5K</td>
                                         <td className='grey'>
-                                            <div class="switch">
+                                            <div className="switch">
 
-                                                <label class="switch">
+                                                <label className="switch">
                                                     <input type="checkbox" name="forSale" />
-                                                    <span class="slider round"></span>
+                                                    <span className="slider round"></span>
                                                 </label>
                                             </div>
                                         </td>

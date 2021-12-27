@@ -161,9 +161,9 @@ function Dashboard() {
                       <h3 className="fs-30">Statistics</h3>
                     </div>
                     <div className="col-sm-3">
-                      <div class="dropdown">
+                      <div className="dropdown">
                         <button
-                          class="btn dropdown-toggle"
+                          className="btn dropdown-toggle"
                           type="button"
                           id="dropdownMenuButton"
                           data-toggle="dropdown"
@@ -173,13 +173,13 @@ function Dashboard() {
                           Time
                         </button>
                         <div
-                          class="dropdown-menu"
+                          className="dropdown-menu"
                           aria-labelledby="dropdownMenuButton"
                         >
-                          <a class="dropdown-item" href="#">
+                          <a className="dropdown-item" href="#">
                             Last Month
                           </a>
-                          <a class="dropdown-item" href="#">
+                          <a className="dropdown-item" href="#">
                             Last Week
                           </a>
                         </div>
@@ -229,10 +229,10 @@ function Dashboard() {
                     <h6 className="grey">54 items</h6>
                   </div>
                   {/* <div className="col-sm-2 p-0">
-                    <div class="switch">
-                      <label class="switch">
+                    <div className="switch">
+                      <label className="switch">
                         <input type="checkbox" name="forSale" />
-                        <span class="slider round"></span>
+                        <span className="slider round"></span>
                       </label>
                     </div>
                   </div> */}
@@ -250,10 +250,10 @@ function Dashboard() {
                     <h6 className="grey">54 items</h6>
                   </div>
                   {/* <div className="col-sm-2 p-0">
-                    <div class="switch">
-                      <label class="switch">
+                    <div className="switch">
+                      <label className="switch">
                         <input type="checkbox" name="forSale" />
-                        <span class="slider round"></span>
+                        <span className="slider round"></span>
                       </label>
                     </div>
                   </div> */}

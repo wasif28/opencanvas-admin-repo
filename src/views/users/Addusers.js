@@ -41,10 +41,10 @@ function AddUser() {
                                             <div className="col-lg-6 col-md-6">
                                                 <div className="form-group">
                                                     <label for="example">Username</label>
-                                                    <input type="text" class="form-control" id="example" aria-describedby="text" placeholder="Enter your username" />
+                                                    <input type="text" className="form-control" id="example" aria-describedby="text" placeholder="Enter your username" />
                                                    
                                                 </div>
-                                                {/* <div class="form-group">
+                                                {/* <div className="form-group">
                                                                         <label For="name">Username</label>
                                                                         <TextValidator
                                                                             fullWidth
