@@ -153,6 +153,7 @@ useEffect(() => {
             {/* <div className="profile-image">
               <img src={`${images['image-profile.png']['default']}`} className="back-img" alt="" />
             </div> */}
+            <button type="button" className="btn-common-pur btn mr-4"> Connect your Wallet</button>
             <div className="dropdown drop-seller">
               <button class="button-seller" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <img src={`${images['image-profile.png']['default']}`} className="back-img" alt="" />
@@ -189,17 +190,6 @@ useEffect(() => {
                 </div>
               </div>  
             </div> */}
-            {/* <button type="button" className="button-header-nav">  <img src={user5} className="pad-rihgtt pr-4" alt="" />Filters</button>
-            <button type="button" className="button-header-filter">Sort by  <img src={user6} className="pad-rihgt pl-4" alt="" /></button> */}
-            {/* {brandName === 'Videos / Videos' && <Link to={`/admin/addvideos`}> <button type="button" className="blue-add-category"> <img src={user4} className="img-fluid pr-2" alt="" />  Add Video</button></Link>  }
-            {brandName === 'Banner / News Banner' || brandName === 'Banner / Game Banner' ?  <Link to={`/admin/addbanner`}> <button type="button" className="blue-add-category"> <img src={user4} className="img-fluid pr-2" alt="" />  Add Banner</button></Link> : null }
-            {brandName == 'Play To Earn' || brandName == 'Daily Challegne' || brandName == 'Upcoming' ?  <Link to={`/admin/addgame`}> <button type="button" className="blue-add-category"> <img src={user4} className="img-fluid pr-2" alt="" />  Add Game</button></Link> : null } 
-            {brandName === 'Task' &&  <Link to={`/admin/addtask`}> <button type="button" className="blue-add-category"> <img src={user4} className="img-fluid pr-2" alt="" />  Add Task</button></Link> }
-             {brandName === 'Reward / This Week Reward' && <Link to={`/admin/thisweekrewardform`}> <button type="button" className="blue-add-category"> <img src={user4} className="img-fluid pr-2" alt="" />  Add Reward</button></Link> }
-             {brandName === 'Push Notifications' && <Link to={`/admin/sendnotification`}> <button type="button" className="blue-add-category">  Send Notification</button></Link> }
-            {brandName === 'Rewards / LeaderBoard' && <Link to={`/admin/dailyleaderboard`}> <button type="button" className="blue-add-category"> Past Week</button></Link> } */}
-            {/* {(window.location.href.indexOf(prop.layout + prop.path) == a} */}
-            {/* {brandName === 'Videos / Category' && <Link> <button type="button" className="blue-add-category" data-toggle="modal" data-target="#exampleModal34">  Add Category</button></Link>} */}
           </Collapse>
         </Container>
       </Navbar>
