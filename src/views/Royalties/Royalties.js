@@ -126,7 +126,7 @@ function Royalties() {
       });
       var config = {
         method: "post",
-        url: `http://192.168.18.40:3000/v1/royalties/payToMultiplePending`,
+        url: `${api_url}/royalties/payToMultiplePending`,
         headers: {
           "Content-Type": "application/json",
           authorization: `Bearer ${getToken}`,
