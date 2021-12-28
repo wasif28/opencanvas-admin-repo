@@ -99,7 +99,8 @@ function Dashboard() {
                                 width={40}
                                 height={40}
                                 className="rounded-full"
-                                src={`${images["Vector123.png"]["default"]}`}
+                                // src={`${images["Vector123.png"]["default"]}`}
+                                src={details?.creators[0]?.picture}
                                 alt=""
                               />
                               <div className="pl-3">
