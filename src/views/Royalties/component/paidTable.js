@@ -15,7 +15,8 @@ const PendingTable = ({item}) => {
   return (
     <tr>
       <td className="main-image">
-        <Link to="/admin/nftsdetail">
+        {/* <Link to={{pathname:"/admin/nftsdetail/", item:item}}> */}
+        <Link to={`/admin/nftsdetail/${item.contractAddress}/${item.tokenID}`}>
           <ul className="d-flex justify-content-start align-items-center">
             <li>
               <img

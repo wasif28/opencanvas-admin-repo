@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/static/css/main.47f0128d.chunk.css",
-    "main.js": "/static/js/main.d427fee3.chunk.js",
-    "main.js.map": "/static/js/main.d427fee3.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.09a5f627.js",
-    "runtime-main.js.map": "/static/js/runtime-main.09a5f627.js.map",
+    "main.js": "/static/js/main.f0fd1802.chunk.js",
+    "main.js.map": "/static/js/main.f0fd1802.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.3cc1bd20.js",
+    "runtime-main.js.map": "/static/js/runtime-main.3cc1bd20.js.map",
     "static/css/2.c2cf9b17.chunk.css": "/static/css/2.c2cf9b17.chunk.css",
-    "static/js/2.0873a9b7.chunk.js": "/static/js/2.0873a9b7.chunk.js",
-    "static/js/2.0873a9b7.chunk.js.map": "/static/js/2.0873a9b7.chunk.js.map",
-    "static/js/3.728bc4fd.chunk.js": "/static/js/3.728bc4fd.chunk.js",
-    "static/js/3.728bc4fd.chunk.js.map": "/static/js/3.728bc4fd.chunk.js.map",
+    "static/js/2.cd54eca4.chunk.js": "/static/js/2.cd54eca4.chunk.js",
+    "static/js/2.cd54eca4.chunk.js.map": "/static/js/2.cd54eca4.chunk.js.map",
+    "static/js/3.7af34dcb.chunk.js": "/static/js/3.7af34dcb.chunk.js",
+    "static/js/3.7af34dcb.chunk.js.map": "/static/js/3.7af34dcb.chunk.js.map",
     "static/js/4.4bb87626.chunk.js": "/static/js/4.4bb87626.chunk.js",
     "static/js/4.4bb87626.chunk.js.map": "/static/js/4.4bb87626.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.c2cf9b17.chunk.css.map": "/static/css/2.c2cf9b17.chunk.css.map",
     "static/css/main.47f0128d.chunk.css.map": "/static/css/main.47f0128d.chunk.css.map",
-    "static/js/2.0873a9b7.chunk.js.LICENSE.txt": "/static/js/2.0873a9b7.chunk.js.LICENSE.txt",
-    "static/js/main.d427fee3.chunk.js.LICENSE.txt": "/static/js/main.d427fee3.chunk.js.LICENSE.txt",
+    "static/js/2.cd54eca4.chunk.js.LICENSE.txt": "/static/js/2.cd54eca4.chunk.js.LICENSE.txt",
+    "static/js/main.f0fd1802.chunk.js.LICENSE.txt": "/static/js/main.f0fd1802.chunk.js.LICENSE.txt",
     "static/media/Vector47.svg": "/static/media/Vector47.2117948e.svg",
     "static/media/arrow-down.svg": "/static/media/arrow-down.02ca9412.svg",
     "static/media/arrow.svg": "/static/media/arrow.95cb3d3b.svg",
@@ -76,10 +76,10 @@
     "static/media/youtube-icon.svg": "/static/media/youtube-icon.1645c50f.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.09a5f627.js",
+    "static/js/runtime-main.3cc1bd20.js",
     "static/css/2.c2cf9b17.chunk.css",
-    "static/js/2.0873a9b7.chunk.js",
+    "static/js/2.cd54eca4.chunk.js",
     "static/css/main.47f0128d.chunk.css",
-    "static/js/main.d427fee3.chunk.js"
+    "static/js/main.f0fd1802.chunk.js"
   ]
 }
