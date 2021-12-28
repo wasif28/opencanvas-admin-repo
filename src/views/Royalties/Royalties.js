@@ -281,7 +281,7 @@ function Royalties() {
                             className="text-center pt-5 position-absolute"
                             style={{ width: "95%" }}
                           >
-                            No Data to Show
+                            No Pending requests
                           </p>
                         ) : (
                           <>
@@ -313,7 +313,7 @@ function Royalties() {
                             className="text-center pt-5 position-absolute"
                             style={{ width: "95%" }}
                           >
-                            No Data to Show
+                            No Paid requests
                           </p>
                         ) : (
                           <>
