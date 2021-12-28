@@ -219,7 +219,7 @@ function Royalties() {
                 )}
               </div>
             </div>
-            <div className="table-responsive p">
+            <div className="table-responsive p" style={{height:'75vh'}}>
               <table className="table ">
                 <thead>
                   <tr>
