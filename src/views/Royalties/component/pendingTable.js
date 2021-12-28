@@ -16,7 +16,7 @@ const PendingTable = ({item}) => {
   return (
     <tr>
       <td className="main-image">
-        <Link to="/admin/artistdetail">
+        <Link to="/admin/nftsdetail">
           <ul className="d-flex justify-content-start align-items-center">
             <li>
               <img
