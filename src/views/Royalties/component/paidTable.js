@@ -44,7 +44,7 @@ const PendingTable = ({item}) => {
               alt=""
             />
           </li>
-          <li className="grey">Ramon Miller</li>
+          <li className="grey">{item?.creator?.name}</li>
         </ul>
       </td>
       <td className="grey">{item?.royaltiesAmount} ETH</td>

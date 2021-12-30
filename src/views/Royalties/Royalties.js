@@ -60,7 +60,29 @@ function Royalties() {
         setMainLoader(false);
       })
       .catch(function (error) {
-        console.log(error);
+        if (error.response) {
+          /*
+           * The request was made and the server responded with a
+           * status code that falls out of the range of 2xx
+           */
+          console.log(error.response.data);
+          if(error.response.data.message === "jwt expired"){
+            localStorage.setItem("openCanvasToken",null);
+            history.push("/adminlogin");
+          }
+          console.log(error.response.status);
+          console.log(error.response.headers);
+        } else if (error.request) {
+          /*
+           * The request was made but no response was received, `error.request`
+           * is an instance of XMLHttpRequest in the browser and an instance
+           * of http.ClientRequest in Node.js
+           */
+          console.log(error.request);
+        } else {
+          // Something happened in setting up the request and triggered an Error
+          console.log("Error", error.message);
+        }
         setMainLoader(false);
       });
   };
@@ -83,8 +105,30 @@ function Royalties() {
         setMainLoader(false);
       })
       .catch(function (error) {
+        if (error.response) {
+          /*
+           * The request was made and the server responded with a
+           * status code that falls out of the range of 2xx
+           */
+          console.log(error.response.data);
+          if(error.response.data.message === "jwt expired"){
+            localStorage.setItem("openCanvasToken",null);
+            history.push("/adminlogin");
+          }
+          console.log(error.response.status);
+          console.log(error.response.headers);
+        } else if (error.request) {
+          /*
+           * The request was made but no response was received, `error.request`
+           * is an instance of XMLHttpRequest in the browser and an instance
+           * of http.ClientRequest in Node.js
+           */
+          console.log(error.request);
+        } else {
+          // Something happened in setting up the request and triggered an Error
+          console.log("Error", error.message);
+        }
         setMainLoader(false);
-        console.log(error);
       });
   };
 
@@ -119,7 +163,7 @@ function Royalties() {
       dummArr.push(objt);
     }
     const res = await DisperseMulti(allTotal, walletArr, userPrices);
-    await console.log("asd",res)
+    await console.log("asd", res);
     if (res) {
       var data = JSON.stringify({
         array: dummArr,
@@ -143,7 +187,7 @@ function Royalties() {
           toast("Transactions failed!");
           setMainLoader(false);
         });
-    }else {
+    } else {
       toast("Transactions cancelled!");
       setMainLoader(false);
     }
@@ -219,7 +263,7 @@ function Royalties() {
                 )}
               </div>
             </div>
-            <div className="table-responsive p" style={{height:'75vh'}}>
+            <div className="table-responsive p" style={{ height: "75vh" }}>
               <table className="table ">
                 <thead>
                   <tr>
