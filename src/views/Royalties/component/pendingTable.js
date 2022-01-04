@@ -47,7 +47,7 @@ const PendingTable = ({item}) => {
         </ul>
       </td>
       <td className="grey">{item?.royaltiesAmount} BNB</td>
-      <td className="grey">2</td>
+      {/* <td className="grey">2</td> */}
     </tr>
   );
 };

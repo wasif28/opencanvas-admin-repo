@@ -294,7 +294,7 @@ function Royalties() {
                         alt=""
                       />
                     </th>
-                    <th>
+                    {/* <th>
                       {" "}
                       Quantity{" "}
                       <img
@@ -302,7 +302,7 @@ function Royalties() {
                         className="pl-1"
                         alt=""
                       />
-                    </th>
+                    </th> */}
                   </tr>
                 </thead>
                 {tab === 0 ? (
