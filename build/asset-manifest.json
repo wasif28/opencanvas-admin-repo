@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.47f0128d.chunk.css",
-    "main.js": "/static/js/main.2332fd8a.chunk.js",
-    "main.js.map": "/static/js/main.2332fd8a.chunk.js.map",
+    "main.js": "/static/js/main.e29c70e5.chunk.js",
+    "main.js.map": "/static/js/main.e29c70e5.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.7948cabf.js",
     "runtime-main.js.map": "/static/js/runtime-main.7948cabf.js.map",
     "static/css/2.52c82de7.chunk.css": "/static/css/2.52c82de7.chunk.css",
@@ -14,7 +14,7 @@
     "static/css/2.52c82de7.chunk.css.map": "/static/css/2.52c82de7.chunk.css.map",
     "static/css/main.47f0128d.chunk.css.map": "/static/css/main.47f0128d.chunk.css.map",
     "static/js/2.e1d1a61e.chunk.js.LICENSE.txt": "/static/js/2.e1d1a61e.chunk.js.LICENSE.txt",
-    "static/js/main.2332fd8a.chunk.js.LICENSE.txt": "/static/js/main.2332fd8a.chunk.js.LICENSE.txt",
+    "static/js/main.e29c70e5.chunk.js.LICENSE.txt": "/static/js/main.e29c70e5.chunk.js.LICENSE.txt",
     "static/media/Vector47.svg": "/static/media/Vector47.73036620.svg",
     "static/media/arrow-down.svg": "/static/media/arrow-down.620334ad.svg",
     "static/media/arrow.svg": "/static/media/arrow.de4b5b5e.svg",
@@ -78,6 +78,6 @@
     "static/css/2.52c82de7.chunk.css",
     "static/js/2.e1d1a61e.chunk.js",
     "static/css/main.47f0128d.chunk.css",
-    "static/js/main.2332fd8a.chunk.js"
+    "static/js/main.e29c70e5.chunk.js"
   ]
 }
