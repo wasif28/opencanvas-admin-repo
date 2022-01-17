@@ -24,8 +24,8 @@ export const setupNetwork = async () => {
               decimals: 18,
             },
             rpcUrls: nodes,
-            blockExplorerUrls: ['https://bscscan.com/'],
-            // blockExplorerUrls: ['https://testnet.bscscan.com/'],
+            // blockExplorerUrls: ['https://bscscan.com/'],
+            blockExplorerUrls: ['https://testnet.bscscan.com/'],
 
           },
         ],
